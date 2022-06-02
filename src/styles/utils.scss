@@ -1,0 +1,26 @@
+@use './media' as *;
+
+.spacer-xs {
+	height: 0.5rem;
+}
+.spacer-sm {
+	height: 1rem;
+}
+.spacer-md {
+	height: 4rem;
+	@include media('<phone') {
+		height: 3rem;
+	}
+}
+.spacer-lg {
+	height: 6.5rem;
+	@include media('<phone') {
+		height: 5rem;
+	}
+}
+.spacer-xl {
+	height: 10rem;
+	@include media('<phone') {
+		height: 6rem;
+	}
+}

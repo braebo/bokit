@@ -1,0 +1,139 @@
+@use './media' as *;
+@import './theme.scss';
+@import './font.scss';
+@import './input/input.scss';
+
+
+
+//* Variables
+
+$breakpoints: (
+	phone: 560px,
+	tablet: 768px,
+	desktop: 1024px
+);
+
+:root {
+	--font-xxs: 0.75rem;
+	--font-xs: 0.9rem;
+	--font-sm: 1rem;
+	--font: 1.1rem;
+	--font-md: clamp(1rem, 5vw, 1.25rem);
+	--font-lg: clamp(1.25rem, 5vw, 1.75rem);
+	--font-xl: clamp(1.5rem, 6vw, 2.25rem);
+	--font-xxl: clamp(1.75rem, 7vw, 3rem);
+	
+	--warn: #ff8888;
+
+	--radius-sm: 3px;
+	--radius: 5px;
+	--radius-md: 7px;
+	--radius-lg: 10px;
+
+	--padding: 0.5rem;
+
+	--shadow-xs: 0px 0.5px 0.75px rgba(0, 0, 0, 0.02), 0px 2px 1.5px rgba(0, 0, 0, 0.02), 0px 2.5px 2px rgba(0, 0, 0, 0.025),
+		0px 3px 3px rgba(0, 0, 0, 0.05), 0px 5px 5px rgba(0, 0, 0, 0.05), 0px 7px 10px rgba(0, 0, 0, 0.075);
+	--shadow-sm: 0px 0.75px 1px rgba(0, 0, 0, 0.03), 0px 2.5px 2px rgba(0, 0, 0, 0.04), 0px 4.5px 3px rgba(0, 0, 0, 0.05),
+		0px 5px 5px rgba(0, 0, 0, 0.075), 0px 10px 10px rgba(0, 0, 0, 0.09), 0px 10px 20px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0px 1.25px 1px rgba(0, 0, 0, 0.07), 0px 2.5px 2.5px rgba(0, 0, 0, 0.08), 0px 4.5px 5px rgba(0, 0, 0, 0.09),
+		0px 5px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+//* Containers
+
+body {
+	margin: 0;
+
+	background-color: var(--light-a);
+
+	transition: color 0.5s background 0.3s background-color 0.3s;
+}
+
+#svelte {
+	display: flex;
+	flex-direction: column;
+}
+
+body,
+#svelte {
+	min-height: 100vh;
+	
+	overflow: hidden;
+}
+
+//* Elements
+
+h1 {
+	margin-bottom: 0 0 1em 0;
+
+	font-size: var(--font-xl);
+	text-align: center;
+}
+
+h2 {
+	font-size: var(--font-lg);
+}
+
+h1,
+h2 {
+	color: var(--dark-a);
+
+	font-weight: 500;
+	letter-spacing: 1.2px;
+	word-spacing: 8px;
+}
+
+p,
+li {
+	color: var(--dark-a, --text-color);
+
+	font-size: var(--font);
+	font-weight: 200;
+	line-height: 1.5;
+
+	@include media('<phone') {
+		word-wrap: break-word;
+	}
+
+	& a {
+		color: var(--dark-c);
+	}
+}
+
+a {
+	color: var(--dark-a);
+
+	& :not(h1, h2) {
+		text-decoration: underline;
+		text-decoration-color: var(--light-d);
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+pre {
+	padding: 0.5em;
+
+	color: var(--dark-a);
+	border-radius: 3px;
+
+	font-size: 16px;
+
+	overflow-x: auto;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}

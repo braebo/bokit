@@ -1,0 +1,66 @@
+//*	RUBIK  -  Variable Font (wght)
+@font-face {
+	font-family: 'rubik';
+	font-weight: 100 900;
+	font-style: normal;
+	src: url('/fonts/rubik/rubik.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'rubik-italic';
+	font-weight: 100 900;
+	font-style: italic;
+	src: url('/fonts/rubik/rubik-italic.ttf') format('truetype');
+}
+
+//*	RED HAT TEXT  -  Varitable Font (wght)
+@font-face {
+	font-family: 'red_hat_text';
+	font-weight: 100 900;
+	font-style: normal;
+	src: url('/fonts/red_hat_text/red_hat_text.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'red_hat_text-italic';
+	font-weight: 100 900;
+	font-style: italic;
+	src: url('/fonts/red_hat_text/red_hat_text-italic.ttf') format('truetype');
+}
+
+//*	inconsolata  -  Variable Font (wght)
+@font-face {
+	font-family: 'dosis';
+	font-weight: 100 900;
+	font-style: normal;
+	src: url('/fonts/dosis/dosis.ttf') format('truetype');
+}
+
+//*	INCONSOLATA  -  Variable Font (wght, wdth)
+@font-face {
+	font-family: 'inconsolata';
+	font-weight: 100 900;
+	font-style: monospace;
+	src: url('/fonts/inconsolata/inconsolata.ttf') format('truetype');
+}
+
+:root {
+	--font-a: 'rubik', sans-serif;
+	--font-b: 'dosis', sans-serif;
+	--font-c: 'red_hat_text', sans-serif;
+	--font-mono: 'mono', monospace;
+}
+
+a,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+section {
+	font-family: var(--font-a);
+}
+
+pre, code {
+	font-family: var(--font-mono);
+}

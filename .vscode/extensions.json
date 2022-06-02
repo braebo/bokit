@@ -1,0 +1,38 @@
+{
+	"recommendations": [
+		/*
+		 * Important extentions
+		 */
+		"christian-kohler.path-intellisense",
+		"ms-vscode.vscode-typescript-next",
+		"fivethree.vscode-svelte-snippets",
+		"aaron-bond.better-comments",
+		// "stylelint.vscode-stylelint", //! No longer works
+		"pivaszbs.svelte-autoimport",
+		"dbaeumer.vscode-eslint",
+		"svelte.svelte-vscode", //? Svelte
+		"silvenon.mdx" //? MDSvex Language Support
+
+		/*
+		 * Honorable mentions
+		 */
+		// "coenraads.bracket-pair-colorizer-2",
+		// "github.vscode-pull-request-github",
+		// "ardenivanov.svelte-intellisense",
+		// "vincaslt.highlight-matching-tag",
+		// "ziyasal.vscode-open-in-github",
+		// "pflannery.vscode-versionlens",
+		// "wayou.vscode-todo-highlight",
+		// "alefragnani.project-manager",
+		// "ms-vsliveshare.vsliveshare",
+		// "pkief.material-icon-theme",
+		// "wallabyjs.quokka-vscode",
+		// "naumovs.color-highlight",
+		// "stevencl.adddoccomments",
+		// "inu1255.easy-snippet",
+		// "anseki.vscode-color",
+		// "vsls-contrib.gistfs",
+		// "mhutchie.git-graph",
+		// "henoc.svgeditor"
+	]
+}

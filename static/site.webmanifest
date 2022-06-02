@@ -1,0 +1,21 @@
+{
+    "name": "Frackit",
+    "short_name": "Frackit",
+	"start_url": "/",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00d0ff",
+    "background_color": "#3d3d3d",
+    "display": "standalone",
+	"descripton": "Fractal's personal sveltekit starter template"
+}
