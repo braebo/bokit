@@ -22,11 +22,11 @@
 		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.7",
-		"cssnano": "^5.1.7",
+		"cssnano": "^5.1.11",
 		"fractils": "^1.0.16",
 		"greset": "2.0.0-8",
-		"mdsvex": "^0.10.5",
-		"postcss": "^8.4.13",
+		"mdsvex": "^0.10.6",
+		"postcss": "^8.4.14",
 		"postcss-load-config": "^3.1.4",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
@@ -35,15 +35,15 @@
 		"rehype-slug": "^5.0.1",
 		"remark-abbr": "^1.4.1",
 		"remark-github": "^11.2.3",
-		"sass": "^1.51.0",
+		"sass": "^1.52.3",
 		"stylefmt": "^6.0.3",
 		"stylelint": "14.6.1",
 		"stylelint-config-idiomatic-order": "^8.1.0",
 		"stylelint-order": "^5.0.0",
 		"stylelint-scss": "4.2.0",
 		"svelte": "^3.48.0",
-		"svelte-preprocess": "^4.10.6",
+		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.0",
-		"typescript": "^4.6.4"
+		"typescript": "^4.7.3"
 	}
 }
