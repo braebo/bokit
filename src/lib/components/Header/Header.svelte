@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HomeIcon from '$lib/graphics/HomeIcon.svelte'
-	import { ThemeToggle } from 'fractils'
-	import Nav from './Nav.svelte'
+	import { mobile, ThemeToggle } from 'fractils'
+	import { Nav } from './Nav'
 </script>
 
 <template lang="pug">
@@ -14,34 +14,43 @@
 
 		Nav
 
-		#theme.corner
-			ThemeToggle
+		+if('!$mobile')
+			#theme.corner(class:mobile='{$mobile}')
+				ThemeToggle
 
 </template>
 
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
+<style lang="sass">
+	header
+		display: flex
+		justify-content: space-between
 
-		width: 100vw;
-		height: 2.5rem;
+		width: 100vw
+		height: 2.5rem
 
-		z-index: 50;
-	}
+		z-index: 50
 
-	.corner {
-		display: flex;
-		position: relative;
-		align-items: center;
 
-		width: 2rem;
-		margin: 2rem 1.4rem;
-	}
+	.corner
+		display: flex
+		position: relative
+		align-items: center
 
-	#theme {
-		margin-right: 0.75rem;
+		width: 2rem
+		margin: 2rem 1.4rem
 
-		font-size: 1.25rem;
-	}
+
+	#theme
+		position: relative
+
+		margin-right: 0.75rem
+		
+		font-size: 1.25rem
+
+		filter: saturate(0)
+
+		z-index: 30
+
+		&.mobile
+			right: 4rem
 </style>

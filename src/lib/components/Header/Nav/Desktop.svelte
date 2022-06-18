@@ -1,24 +1,34 @@
 <script lang="ts">
+	import { clickOutside, mobile } from 'fractils'
+	import { fly } from 'svelte/transition'
+	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
 
-	const links = [
-		['/', 'Home'],
-		['/about', 'About']
-	]
+	const links = getContext('links')
+	export let showMenu = false
 </script>
 
 <template lang="pug">
 
-	nav
-		ul
-			+each('links as [path, title], i (title)')
+	+if('!$mobile')
 
-				li(class:active='{$page.url.pathname === path}')
+		nav(
+			class:showMenu
+			class:mobile='{$mobile}'
+			use:clickOutside!='{() => showMenu = false}'
+		)
+			ul
+				+each('links as [path, title], i (title)')
 
-					a(
-						sveltekit:prefetch
-						href='{path}'
-					) {title}
+					li(
+						class:active='{$page.url.pathname === path}'
+						transition:fly='{{ y: -10 - (5 * i) }}'
+					)
+
+						a(
+							sveltekit:prefetch
+							href='{path}'
+						) {title}
 
 </template>
 
