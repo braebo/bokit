@@ -7,7 +7,6 @@
 		"ms-vscode.vscode-typescript-next",
 		"fivethree.vscode-svelte-snippets",
 		"aaron-bond.better-comments",
-		// "stylelint.vscode-stylelint", //! No longer works
 		"pivaszbs.svelte-autoimport",
 		"dbaeumer.vscode-eslint",
 		"svelte.svelte-vscode", //? Svelte
@@ -16,10 +15,8 @@
 		/*
 		 * Honorable mentions
 		 */
-		// "coenraads.bracket-pair-colorizer-2",
 		// "github.vscode-pull-request-github",
 		// "ardenivanov.svelte-intellisense",
-		// "vincaslt.highlight-matching-tag",
 		// "ziyasal.vscode-open-in-github",
 		// "pflannery.vscode-versionlens",
 		// "wayou.vscode-todo-highlight",
