@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { clickOutside, mobile } from 'fractils'
 	import { fly } from 'svelte/transition'
 	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
@@ -10,11 +9,7 @@
 
 <template lang="pug">
 
-	nav(
-		class:showMenu
-		class:mobile='{$mobile}'
-		use:clickOutside!='{() => showMenu = false}'
-	)
+	nav(class:showMenu)
 		ul
 			+each('links as [path, title], i (title)')
 
