@@ -10,25 +10,23 @@
 
 <template lang="pug">
 
-	+if('!$mobile')
+	nav(
+		class:showMenu
+		class:mobile='{$mobile}'
+		use:clickOutside!='{() => showMenu = false}'
+	)
+		ul
+			+each('links as [path, title], i (title)')
 
-		nav(
-			class:showMenu
-			class:mobile='{$mobile}'
-			use:clickOutside!='{() => showMenu = false}'
-		)
-			ul
-				+each('links as [path, title], i (title)')
+				li(
+					class:active='{$page.url.pathname === path}'
+					transition:fly='{{ y: -10 - (5 * i) }}'
+				)
 
-					li(
-						class:active='{$page.url.pathname === path}'
-						transition:fly='{{ y: -10 - (5 * i) }}'
-					)
-
-						a(
-							sveltekit:prefetch
-							href='{path}'
-						) {title}
+					a(
+						sveltekit:prefetch
+						href='{path}'
+					) {title}
 
 </template>
 

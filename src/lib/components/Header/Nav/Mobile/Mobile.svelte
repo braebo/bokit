@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { clickOutside, mobile, ThemeToggle } from 'fractils'
+	import { fly, fade } from 'svelte/transition'
 	import PageFill from './PageFill.svelte'
-	import { fly } from 'svelte/transition'
 	import Burger from './Burger.svelte'
 	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
@@ -12,15 +12,16 @@
 
 <template lang="pug">
 
-	+if('$mobile')
-
 		.burger(use:clickOutside!='{() => showMenu = false}')
 			Burger(bind:showMenu)
+		
 		PageFill(bind:showMenu)
-		#theme.corner
-			ThemeToggle
+		
 
 		+if('showMenu')
+
+			#theme.corner
+				ThemeToggle
 
 			nav(
 				class:showMenu
@@ -33,7 +34,8 @@
 
 						li(
 							class:active='{$page.url.pathname === path}'
-							transition:fly='{{ y: -10 - (5 * i) }}'
+							in:fly='{{ y: -10 - (5 * i) }}'
+							out:fade='{{ duration: 50 }}'
 						)
 
 							a(
@@ -97,5 +99,12 @@
 
 	.active {
 		color: var(--brand-a);
+	}
+
+	#theme {
+		position: fixed;
+		top: 1rem;
+		right: 5rem;
+		z-index: 25;
 	}
 </style>
