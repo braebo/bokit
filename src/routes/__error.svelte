@@ -1,10 +1,10 @@
 <script context="module" lang="ts">
-	import type { ErrorLoad } from '@sveltejs/kit'
+	import type { Load } from '@sveltejs/kit'
 
-	export function load({ error, status }: { error: Error; status: number }) {
+	const load: Load = ({ error, status }) => {
 		return {
 			props: {
-				err: `${status}: ${error.message}`
+				err: `${status}: ${error?.message}`
 			}
 		}
 	}
