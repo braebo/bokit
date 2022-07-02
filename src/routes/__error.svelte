@@ -27,7 +27,7 @@
 	+if('dev')
 		.error
 			pre.message {error.message}
-			pre.stack {error.stack.split(error.message)[1].repeat(5)}
+			pre.stack {error.stack.split(error.message)[1]}
 
 </template>
 
