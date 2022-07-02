@@ -7,9 +7,8 @@
 		"ms-vscode.vscode-typescript-next",
 		"fivethree.vscode-svelte-snippets",
 		"aaron-bond.better-comments",
-		"pivaszbs.svelte-autoimport",
 		"dbaeumer.vscode-eslint",
-		"svelte.svelte-vscode", //? Svelte
+		"svelte.svelte-vscode",
 		"silvenon.mdx" //? MDSvex Language Support
 
 		/*
