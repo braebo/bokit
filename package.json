@@ -12,7 +12,7 @@
 	"type": "module",
 	"scripts": {
 		"postinstall": "svelte-kit sync",
-		"dev": "svelte-kit dev",
+		"dev": "vite dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -40,6 +40,7 @@
 		"svelte": "^3.48.0",
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.0",
-		"typescript": "^4.7.4"
+		"typescript": "^4.7.4",
+		"vite": "^2.9.14"
 	}
 }
