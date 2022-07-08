@@ -15,23 +15,6 @@
 
 	"workbench.iconTheme": "material-icon-theme",
 
-	//* More subtle Template Tags
-	"editor.tokenColorCustomizations": {
-		"textMateRules": [
-			{
-				"scope": [
-					"punctuation.definition.tag",
-					"entity.name.tag.svelte",
-					"punctuation.separator.key-value.svelte",
-					"constant.name.attribute.tag.pug"
-				],
-				"settings": {
-					"foreground": "#5a86ff36"
-				}
-			}
-		]
-	},
-
 	//* File nesting
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
@@ -44,11 +27,138 @@
 		"default.nix": "shell.nix",
 		".env": "*.env, .env.*, env.d.ts",
 		"dockerfile": ".dockerignore, dockerfile*",
-		"package.json": ".browserslist*, .circleci*, .codecov, .commitlint*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .mocha*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .travis*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, api-extractor.json, appveyor*, ava.config.*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, cypress.json, dangerfile*, dprint.json, firebase.json, grunt*, gulp*, jasmine.*, jenkins*, jest.config.*, jsconfig.*, karma*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, nx.*, package-lock.json, playwright.config.*, pm2.*, pnpm*, prettier*, pullapprove*, puppeteer.config.*, renovate*, rollup.config.*, stylelint*, tsconfig.*, tsdoc.*, tslint*, tsup.config.*, turbo*, typedoc*, vercel*, vetur.config.*, vitest.config.*, webpack.config.*, workspace.json, xo.config.*, yarn*",
+		"package.json": ".browserslist*, .circleci*, .codecov, .commitlint*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitignore, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .mocha*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .releaserc*, .sentry*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .travis*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, api-extractor.json, appveyor*, ava.config.*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, cypress.json, dangerfile*, dprint.json, firebase.json, grunt*, gulp*, jasmine.*, jenkins*, jest.config.*, jsconfig.*, karma*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, nx.*, package-lock.json, playwright.config.*, pm2.*, pnpm*, pullapprove*, puppeteer.config.*, renovate*, rollup.config.*, stylelint*, tsdoc.*, tslint*, tsup.config.*, turbo*, typedoc*, vercel*, vetur.config.*, vitest.config.*, webpack.config.*, workspace.json, xo.config.*, yarn*",
 		"rush.json": ".browserslist*, .circleci*, .codecov, .commitlint*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitpod*, .huskyrc*, .jslint*, .lintstagedrc*, .markdownlint*, .mocha*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .releaserc*, .sentry*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .travis*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, api-extractor.json, appveyor*, ava.config.*, azure-pipelines*, bower.json, build.config.*, commitlint*, crowdin*, cypress.json, dangerfile*, dprint.json, firebase.json, grunt*, gulp*, jasmine.*, jenkins*, jest.config.*, jsconfig.*, karma*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, nx.*, package-lock.json, playwright.config.*, pm2.*, pnpm*, prettier*, pullapprove*, puppeteer.config.*, renovate*, rollup.config.*, stylelint*, tsconfig.*, tsdoc.*, tslint*, tsup.config.*, turbo*, typedoc*, vercel*, vetur.config.*, vitest.config.*, webpack.config.*, workspace.json, xo.config.*, yarn*",
 		"readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
 		"cargo.toml": ".clippy.toml, .rustfmt.toml, cargo.lock, clippy.toml, cross.toml, rust-toolchain.toml, rustfmt.toml",
-		"svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .htmlnanorc*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.json, env.d.ts, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+		"svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .htmlnanorc*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.json, env.d.ts, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*,.prettier*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vite.config.*, vitest.config.*, webpack.config.*, windi.config.*",
 		"favicon.ico": "robots.txt, safari-pinned-tab.svg, browserconfig.xml, site.webmanifest, *.png"
+	},
+
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			//* More subtle Template Tags
+			{
+				"scope": [
+					"punctuation.definition.tag",
+					"entity.name.tag.svelte",
+					"punctuation.separator.key-value.svelte",
+					"constant.name.attribute.tag.pug"
+				],
+				"settings": {
+					"foreground": "#5a86ff36"
+				}
+			},
+			//* Disable Bold & Itallic for all themes
+			{
+				"scope": [
+					// "comment",
+					// "comment.block",
+					// "comment.block.documentation",
+					// "comment.line",
+					"constant",
+					"constant.character",
+					"constant.character.escape",
+					"constant.numeric",
+					"constant.numeric.integer",
+					"constant.numeric.float",
+					"constant.numeric.hex",
+					"constant.numeric.octal",
+					"constant.other",
+					"constant.regexp",
+					"constant.rgb-value",
+					"emphasis",
+					"entity",
+					"entity.name",
+					"entity.name.class",
+					"entity.name.function",
+					"entity.name.method",
+					"entity.name.section",
+					"entity.name.selector",
+					"entity.name.tag",
+					"entity.name.type",
+					"entity.other",
+					"entity.other.attribute-name",
+					"entity.other.inherited-class",
+					"invalid",
+					"invalid.deprecated",
+					"invalid.illegal",
+					"keyword",
+					"keyword.control",
+					"keyword.operator",
+					"keyword.operator.new",
+					"keyword.operator.assignment",
+					"keyword.operator.arithmetic",
+					"keyword.operator.logical",
+					"keyword.other",
+					"markup",
+					"markup.bold",
+					"markup.changed",
+					"markup.deleted",
+					"markup.heading",
+					"markup.inline.raw",
+					"markup.inserted",
+					"markup.italic",
+					"markup.list",
+					"markup.list.numbered",
+					"markup.list.unnumbered",
+					"markup.other",
+					"markup.quote",
+					"markup.raw",
+					"markup.underline",
+					"markup.underline.link",
+					"meta",
+					"meta.block",
+					"meta.cast",
+					"meta.class",
+					"meta.function",
+					"meta.function-call",
+					"meta.preprocessor",
+					"meta.return-type",
+					"meta.selector",
+					"meta.tag",
+					"meta.type.annotation",
+					"meta.type",
+					"punctuation.definition.string.begin",
+					"punctuation.definition.string.end",
+					"punctuation.separator",
+					"punctuation.separator.continuation",
+					"punctuation.terminator",
+					"storage",
+					"storage.modifier",
+					"storage.type",
+					"string",
+					"string.interpolated",
+					"string.other",
+					"string.quoted",
+					"string.quoted.double",
+					"string.quoted.other",
+					"string.quoted.single",
+					"string.quoted.triple",
+					"string.regexp",
+					"string.unquoted",
+					"strong",
+					"support",
+					"support.class",
+					"support.constant",
+					"support.function",
+					"support.other",
+					"support.type",
+					"support.type.property-name",
+					"support.variable",
+					"variable",
+					"variable.language",
+					"variable.name",
+					"variable.other",
+					"variable.other.readwrite",
+					"variable.parameter"
+					// "*",
+					// "entity.other.attribute-name"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
 	}
 }
