@@ -1,9 +1,15 @@
-<h1>Hello World</h1>
+<template lang="pug">
+	
+.br-lg
+
+section
+	
+	h1.card Hello 🌎
+
+</template>
 
 <style>
 	h1 {
-		margin-top: 8rem;
-
 		font-size: var(--font-xl);
 	}
 </style>
