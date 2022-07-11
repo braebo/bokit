@@ -16,69 +16,23 @@
 //                  Kitty Giraudel (@kittygiraudel)
 //
 //      This project is licensed under the terms of the MIT license
-////
-/// include-media library public configuration
-/// @author Eduardo Boucas
-/// @access public
-////
 
-///
-/// Creates a list of global breakpoints
-///
-/// @example scss - Creates a single breakpoint with the label `phone`
-///  $breakpoints: ('phone': 320px);
-///
 $breakpoints: (
-	//   'phone': 320px,
 	'phone': 560px,
 	'tablet': 768px,
 	'desktop': 1024px
 ) !default;
 
-///
-/// Creates a list of static expressions or media types
-///
-/// @example scss - Creates a single media type (screen)
-///  $media-expressions: ('screen': 'screen');
-///
-/// @example scss - Creates a static expression with logical disjunction (OR operator)
-///  $media-expressions: (
-///    'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
-///  );
-///
 $media-expressions: (
 	'screen': 'screen',
 	'print': 'print',
 	'handheld': 'handheld',
 	'landscape': '(orientation: landscape)',
 	'portrait': '(orientation: portrait)',
-	'retina2x':
-		'(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
-	'retina3x':
-		'(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)'
+	'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)'
 ) !default;
 
-///
-/// Defines a number to be added or subtracted from each unit when declaring breakpoints with exclusive intervals
-///
-/// @example scss - Interval for pixels is defined as `1` by default
-///  @include media('>128px') {}
-///
-///  /* Generates: */
-///  @media (min-width: 129px) {}
-///
-/// @example scss - Interval for ems is defined as `0.01` by default
-///  @include media('>20em') {}
-///
-///  /* Generates: */
-///  @media (min-width: 20.01em) {}
-///
-/// @example scss - Interval for rems is defined as `0.1` by default, to be used with `font-size: 62.5%;`
-///  @include media('>2.0rem') {}
-///
-///  /* Generates: */
-///  @media (min-width: 2.1rem) {}
-///
 $unit-intervals: (
 	'px': 1,
 	'em': 0.01,
@@ -86,102 +40,12 @@ $unit-intervals: (
 	'': 0
 ) !default;
 
-///
-/// Defines whether support for media queries is available, useful for creating separate stylesheets
-/// for browsers that don't support media queries.
-///
-/// @example scss - Disables support for media queries
-///  $im-media-support: false;
-///  @include media('>=tablet') {
-///    .foo {
-///      color: tomato;
-///    }
-///  }
-///
-///  /* Generates: */
-///  .foo {
-///    color: tomato;
-///  }
-///
 $im-media-support: true !default;
 
-///
-/// Selects which breakpoint to emulate when support for media queries is disabled. Media queries that start at or
-/// intercept the breakpoint will be displayed, any others will be ignored.
-///
-/// @example scss - This media query will show because it intercepts the static breakpoint
-///  $im-media-support: false;
-///  $im-no-media-breakpoint: 'desktop';
-///  @include media('>=tablet') {
-///    .foo {
-///      color: tomato;
-///    }
-///  }
-///
-///  /* Generates: */
-///  .foo {
-///    color: tomato;
-///  }
-///
-/// @example scss - This media query will NOT show because it does not intercept the desktop breakpoint
-///  $im-media-support: false;
-///  $im-no-media-breakpoint: 'tablet';
-///  @include media('>=desktop') {
-///    .foo {
-///      color: tomato;
-///    }
-///  }
-///
-///  /* No output */
-///
 $im-no-media-breakpoint: 'desktop' !default;
 
-///
-/// Selects which media expressions are allowed in an expression for it to be used when media queries
-/// are not supported.
-///
-/// @example scss - This media query will show because it intercepts the static breakpoint and contains only accepted media expressions
-///  $im-media-support: false;
-///  $im-no-media-breakpoint: 'desktop';
-///  $im-no-media-expressions: ('screen');
-///  @include media('>=tablet', 'screen') {
-///    .foo {
-///      color: tomato;
-///    }
-///  }
-///
-///   /* Generates: */
-///   .foo {
-///     color: tomato;
-///   }
-///
-/// @example scss - This media query will NOT show because it intercepts the static breakpoint but contains a media expression that is not accepted
-///  $im-media-support: false;
-///  $im-no-media-breakpoint: 'desktop';
-///  $im-no-media-expressions: ('screen');
-///  @include media('>=tablet', 'retina2x') {
-///    .foo {
-///      color: tomato;
-///    }
-///  }
-///
-///  /* No output */
-///
 $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
-////
-/// Cross-engine logging engine
-/// @author Kitty Giraudel
-/// @access private
-////
-
-///
-/// Log a message either with `@error` if supported
-/// else with `@warn`, using `feature-exists('at-error')`
-/// to detect support.
-///
-/// @param {String} $message - Message to log
-///
 @function im-log($message) {
 	@if feature-exists('at-error') {
 		@error $message;
@@ -193,33 +57,14 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return $message;
 }
 
-///
-/// Wrapper mixin for the log function so it can be used with a more friendly
-/// API than `@if im-log('..') {}` or `$_: im-log('..')`. Basically, use the function
-/// within functions because it is not possible to include a mixin in a function
-/// and use the mixin everywhere else because it's much more elegant.
-///
-/// @param {String} $message - Message to log
-///
 @mixin log($message) {
 	@if im-log($message) {
 	}
 }
 
-///
-/// Function with no `@return` called next to `@warn` in Sass 3.3
-/// to trigger a compiling error and stop the process.
-///
 @function noop() {
 }
 
-///
-/// Determines whether a list of conditions is intercepted by the static breakpoint.
-///
-/// @param {Arglist}   $conditions  - Media query conditions
-///
-/// @return {Boolean} - Returns true if the conditions are intercepted by the static breakpoint
-///
 @function im-intercepts-static-breakpoint($conditions...) {
 	$no-media-breakpoint-value: map-get($breakpoints, $im-no-media-breakpoint);
 
@@ -234,9 +79,7 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 			$prefix: get-expression-prefix($operator);
 			$value: get-expression-value($condition, $operator);
 
-			@if ($prefix == 'max' and $value <= $no-media-breakpoint-value) or
-				($prefix == 'min' and $value > $no-media-breakpoint-value)
-			{
+			@if ($prefix == 'max' and $value <= $no-media-breakpoint-value) or ($prefix == 'min' and $value > $no-media-breakpoint-value) {
 				@return false;
 			}
 		} @else if not index($im-no-media-expressions, $condition) {
@@ -247,19 +90,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return true;
 }
 
-////
-/// Parsing engine
-/// @author Kitty Giraudel
-/// @access private
-////
-
-///
-/// Get operator of an expression
-///
-/// @param {String} $expression - Expression to extract operator from
-///
-/// @return {String} - Any of `>=`, `>`, `<=`, `<`, `≥`, `≤`
-///
 @function get-expression-operator($expression) {
 	@each $operator in ('>=', '>', '<=', '<', '≥', '≤') {
 		@if str-index($expression, $operator) {
@@ -275,14 +105,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	$_: im-log('No operator found in `#{$expression}`.');
 }
 
-///
-/// Get dimension of an expression, based on a found operator
-///
-/// @param {String} $expression - Expression to extract dimension from
-/// @param {String} $operator - Operator from `$expression`
-///
-/// @return {String} - `width` or `height` (or potentially anything else)
-///
 @function get-expression-dimension($expression, $operator) {
 	$operator-index: str-index($expression, $operator);
 	$parsed-dimension: str-slice($expression, 0, $operator-index - 1);
@@ -295,25 +117,10 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return $dimension;
 }
 
-///
-/// Get dimension prefix based on an operator
-///
-/// @param {String} $operator - Operator
-///
-/// @return {String} - `min` or `max`
-///
 @function get-expression-prefix($operator) {
 	@return if(index(('<', '<=', '≤'), $operator), 'max', 'min');
 }
 
-///
-/// Get value of an expression, based on a found operator
-///
-/// @param {String} $expression - Expression to extract value from
-/// @param {String} $operator - Operator from `$expression`
-///
-/// @return {Number} - A numeric value
-///
 @function get-expression-value($expression, $operator) {
 	$operator-index: str-index($expression, $operator);
 	$value: str-slice($expression, $operator-index + str-length($operator));
@@ -344,13 +151,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return $value;
 }
 
-///
-/// Parse an expression to return a valid media-query expression
-///
-/// @param {String} $expression - Expression to parse
-///
-/// @return {String} - Valid media query
-///
 @function parse-expression($expression) {
 	// If it is part of $media-expressions, it has no operator
 	// then there is no need to go any further, just return the value
@@ -366,17 +166,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return '(#{$prefix}-#{$dimension}: #{$value})';
 }
 
-///
-/// Slice `$list` between `$start` and `$end` indexes
-///
-/// @access private
-///
-/// @param {List} $list - List to slice
-/// @param {Number} $start [1] - Start index
-/// @param {Number} $end [length($list)] - End index
-///
-/// @return {List} Sliced list
-///
 @function slice($list, $start: 1, $end: length($list)) {
 	@if length($list) < 1 or $start > $end {
 		@return ();
@@ -391,19 +180,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return $result;
 }
 
-////
-/// String to number converter
-/// @author Kitty Giraudel
-/// @access private
-////
-
-///
-/// Casts a string into a number
-///
-/// @param {String | Number} $value - Value to be parsed
-///
-/// @return {Number}
-///
 @function to-number($value) {
 	@if type-of($value) == 'number' {
 		@return $value;
@@ -453,14 +229,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return if($minus, -$result, $result);
 }
 
-///
-/// Add `$unit` to `$value`
-///
-/// @param {Number} $value - Value to add unit to
-/// @param {String} $unit - String representation of the unit
-///
-/// @return {Number} - `$value` expressed in `$unit`
-///
 @function to-length($value, $unit) {
 	$units: (
 		'px': 1px,
@@ -487,44 +255,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	@return $value * map-get($units, $unit);
 }
 
-///
-/// This mixin aims at redefining the configuration just for the scope of
-/// the call. It is helpful when having a component needing an extended
-/// configuration such as custom breakpoints (referred to as tweakpoints)
-/// for instance.
-///
-/// @author Kitty Giraudel
-///
-/// @param {Map} $tweakpoints [()] - Map of tweakpoints to be merged with `$breakpoints`
-/// @param {Map} $tweak-media-expressions [()] - Map of tweaked media expressions to be merged with `$media-expression`
-///
-/// @example scss - Extend the global breakpoints with a tweakpoint
-///  @include media-context(('custom': 678px)) {
-///    .foo {
-///      @include media('>phone', '<=custom') {
-///       // ...
-///      }
-///    }
-///  }
-///
-/// @example scss - Extend the global media expressions with a custom one
-///  @include media-context($tweak-media-expressions: ('all': 'all')) {
-///    .foo {
-///      @include media('all', '>phone') {
-///       // ...
-///      }
-///    }
-///  }
-///
-/// @example scss - Extend both configuration maps
-///  @include media-context(('custom': 678px), ('all': 'all')) {
-///    .foo {
-///      @include media('all', '>phone', '<=custom') {
-///       // ...
-///      }
-///    }
-///  }
-///
 @mixin media-context($tweakpoints: (), $tweak-media-expressions: ()) {
 	// Save global configuration
 	$global-breakpoints: $breakpoints;
@@ -541,39 +271,8 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 	$media-expressions: $global-media-expressions !global;
 }
 
-////
-/// include-media public exposed API
-/// @author Eduardo Boucas
-/// @access public
-////
-
-///
-/// Generates a media query based on a list of conditions
-///
-/// @param {Arglist}   $conditions  - Media query conditions
-///
-/// @example scss - With a single set breakpoint
-///  @include media('>phone') { }
-///
-/// @example scss - With two set breakpoints
-///  @include media('>phone', '<=tablet') { }
-///
-/// @example scss - With custom values
-///  @include media('>=358px', '<850px') { }
-///
-/// @example scss - With set breakpoints with custom values
-///  @include media('>desktop', '<=1350px') { }
-///
-/// @example scss - With a static expression
-///  @include media('retina2x') { }
-///
-/// @example scss - Mixing everything
-///  @include media('>=350px', '<tablet', 'retina3x') { }
-///
 @mixin media($conditions...) {
-	@if ($im-media-support and length($conditions) == 0) or
-		(not $im-media-support and im-intercepts-static-breakpoint($conditions...))
-	{
+	@if ($im-media-support and length($conditions) == 0) or (not $im-media-support and im-intercepts-static-breakpoint($conditions...)) {
 		@content;
 	} @else if ($im-media-support and length($conditions) > 0) {
 		@media #{unquote(parse-expression(nth($conditions, 1)))} {
