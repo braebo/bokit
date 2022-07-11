@@ -24,3 +24,32 @@
 		height: 6rem;
 	}
 }
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	max-width: min(100%, 100vw);
+	padding: var(--padding);
+
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+}
