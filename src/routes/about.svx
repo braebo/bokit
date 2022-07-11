@@ -1,5 +1,6 @@
-Minimal Sveltekit starter template, pre-configured with:
+An opinionated starter template for Sveltekit, pre-configured with:
 
+-   Mobile Menu
 -   [Autoprefixer](https://github.com/postcss/autoprefixer)
 -   [Typescript](https://www.typescriptlang.org/)
 -   [Dark Mode](https://fractils.fractal-hq.com/#theme)
@@ -14,11 +15,27 @@ Minimal Sveltekit starter template, pre-configured with:
 <style>
 	p {
 		max-width: min(100vw, 900px);
-		margin: 0 auto;
 		margin: 4rem auto 2rem auto;
 	}
+
 	ul {
-		list-style-type: disc;
+		width: 110px;
 		margin: 1rem auto;
+	}
+
+	del {
+		opacity: 0.5;
+	}
+
+	a {
+		padding: 0 0.02rem;
+
+		font-variation-settings: 'wght' 300;
+		
+		transition: 0.15s ease-in-out;
+	}
+	a:hover {
+		padding: 0rem;
+		font-variation-settings: 'wght' 400;
 	}
 </style>
