@@ -1,0 +1,77 @@
+h1 {
+	font-size: var(--font-xl);
+}
+
+h2 {
+	font-size: var(--font-lg);
+}
+
+h1,
+h2 {
+	color: var(--dark-a);
+
+	font-weight: 500;
+	letter-spacing: 1.2px;
+	word-spacing: 8px;
+}
+
+p,
+li {
+	color: var(--dark-a, --text-color);
+
+	font-size: var(--font);
+	font-weight: 200;
+	line-height: 1.5;
+
+	@include media('<phone') {
+		word-wrap: break-word;
+	}
+
+	& a {
+		color: var(--dark-c);
+	}
+}
+
+a {
+	color: var(--dark-a);
+
+	text-decoration: underline;
+	text-decoration-color: var(--light-d);
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--brand-a);
+	}
+}
+
+pre {
+	max-width: 100%;
+	height: max-content;
+	padding: 0.5em;
+
+	color: var(--dark-a);
+	border-radius: 3px;
+
+	font-size: 16px;
+
+	overflow-x: auto;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding);
+
+	max-width: var(--page-width);
+	margin: 0 auto;
+}
