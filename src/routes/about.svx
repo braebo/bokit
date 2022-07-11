@@ -1,5 +1,11 @@
-An opinionated starter template for Sveltekit, pre-configured with:
+<section>
 
+### An opinionated starter template for Sveltekit
+
+Pre-configured with:
+
+-   Dynamic Page Title
+-   [Auto Link Headings](https://github.com/rehypejs/rehype-autolink-headings)
 -   Mobile Menu
 -   [Autoprefixer](https://github.com/postcss/autoprefixer)
 -   [Typescript](https://www.typescriptlang.org/)
@@ -12,19 +18,17 @@ An opinionated starter template for Sveltekit, pre-configured with:
 -   [SCSS](https://sass-lang.com/)
 -   [Pug](https://github.com/pugjs/pug)
 
+</section>
+
 <style>
 	p {
 		max-width: min(100vw, 900px);
-		margin: 4rem auto 2rem auto;
+		margin: auto;
 	}
 
 	ul {
-		width: 110px;
 		margin: 1rem auto;
-	}
-
-	del {
-		opacity: 0.5;
+		width: 175px;
 	}
 
 	a {
