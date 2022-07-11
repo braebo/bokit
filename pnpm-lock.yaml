@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/adapter-vercel': next
   '@sveltejs/kit': next
-  '@types/node': ^18.0.0
+  '@types/node': ^18.0.3
   autoprefixer: ^10.4.7
   cssnano: ^5.1.12
   fractils: ^2.0.3
@@ -19,7 +19,7 @@ specifiers:
   remark-abbr: ^1.4.1
   remark-github: ^11.2.3
   sass: ^1.53.0
-  svelte: ^3.48.0
+  svelte: ^3.49.0
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.0
   typescript: ^4.7.4
@@ -27,7 +27,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.60
-  '@sveltejs/kit': 1.0.0-next.366_svelte@3.49.0+vite@2.9.14
+  '@sveltejs/kit': 1.0.0-next.367_svelte@3.49.0+vite@2.9.14
   '@types/node': 18.0.3
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
@@ -109,8 +109,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.366_svelte@3.49.0+vite@2.9.14:
-    resolution: {integrity: sha512-TzHIb0D5cTUb/9g+hGuQU0Ja7VneJkQOBeKKHzXjq7RBO6EHOQ64YJXC9LR2jxveWGwZAaqw4PNT5LfySzLs/w==}
+  /@sveltejs/kit/1.0.0-next.367_svelte@3.49.0+vite@2.9.14:
+    resolution: {integrity: sha512-glilWol6iJEf8esQpH0HOzdI4n/xgZtoLa9U9sbg+BZelQXFRRglaGyw+ahjEreBH5MH3/bpIYAPPObQN8Pgbg==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
@@ -328,7 +328,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001363
-      electron-to-chromium: 1.4.184
+      electron-to-chromium: 1.4.185
       node-releases: 2.0.6
       update-browserslist-db: 1.0.4_browserslist@4.21.1
     dev: true
@@ -578,8 +578,8 @@ packages:
       domhandler: 4.3.1
     dev: true
 
-  /electron-to-chromium/1.4.184:
-    resolution: {integrity: sha512-IADi390FRdvxWfVX3hjzfTDNVHiTqVo9ar53/7em/SfhUG9YcjVhyQecY/XwmBHRKden/wFud7RWOUH7+7LFng==}
+  /electron-to-chromium/1.4.185:
+    resolution: {integrity: sha512-9kV/isoOGpKkBt04yYNaSWIBn3187Q5VZRtoReq8oz5NY/A4XmU6cAoqgQlDp7kKJCZMRjWZ8nsQyxfpFHvfyw==}
     dev: true
 
   /emoji-regex/8.0.0:
