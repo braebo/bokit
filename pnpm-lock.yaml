@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: ^10.4.7
   cssnano: ^5.1.12
   fractils: ^2.0.3
-  greset: 2.0.0-8
+  greset: 2.0.0
   mdsvex: ^0.10.6
   postcss: ^8.4.14
   postcss-load-config: ^4.0.1
@@ -31,7 +31,7 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
   fractils: 2.0.3
-  greset: 2.0.0-8
+  greset: 2.0.0
   mdsvex: 0.10.6_svelte@3.49.0
   postcss: 8.4.14
   postcss-load-config: 4.0.1_postcss@8.4.14
@@ -902,8 +902,8 @@ packages:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
 
-  /greset/2.0.0-8:
-    resolution: {integrity: sha512-BA/URMGXsVtGYjWTCU8lJ1gVfRBNvIo9msI/LP5RSNbxVE9GDM1nYFvYCQ3UnTCzhSTuXDuMGXoH5G8/7OT0pA==}
+  /greset/2.0.0:
+    resolution: {integrity: sha512-oC3JpE4RUT3iMkkmu5uzWc0H8prJAN3Nv7kcxPlJUtWBQi16UpPm6dxseIeC+KKlevxoSBzuTQeFi71qAjWHxA==}
     dependencies:
       rfs: 9.0.6
     dev: true

@@ -25,7 +25,7 @@
 		"autoprefixer": "^10.4.7",
 		"cssnano": "^5.1.12",
 		"fractils": "^2.0.3",
-		"greset": "2.0.0-8",
+		"greset": "2.0.0",
 		"mdsvex": "^0.10.6",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^4.0.1",
