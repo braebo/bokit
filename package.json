@@ -21,7 +21,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
-		"@types/node": "^18.0.3",
+		"@types/node": "^18.0.6",
 		"autoprefixer": "^10.4.7",
 		"cssnano": "^5.1.12",
 		"fractils": "^2.0.3",
@@ -35,7 +35,7 @@
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",
 		"remark-abbr": "^1.4.1",
-		"sass": "^1.53.0",
+		"sass": "^1.54.0",
 		"svelte": "^3.49.0",
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.0",
