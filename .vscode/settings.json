@@ -13,9 +13,14 @@
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 
+	"[glsl]": {
+		"editor.formatOnSave": false,
+		"editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
+	},
+
 	"workbench.iconTheme": "material-icon-theme",
 
-	//* File nesting
+	//* File nesting.
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.fileNesting.patterns": {
@@ -35,9 +40,76 @@
 		"favicon.ico": "robots.txt, safari-pinned-tab.svg, browserconfig.xml, site.webmanifest, *.png"
 	},
 
+	//* Custom region folding.
+	"explicitFolding.rules": {
+		"*": {
+			"beginRegex": "[ \\t]*?\\/\\/\\·(?:.*)?",
+			"endRegex": "[ \\t]*?\\/\\/\\⌟(?:.*)?"
+		}
+	},
+
+	//* More comment tags.
+	"better-comments.tags": [
+		{
+			"tag": "·",
+			"color": "#374fa6",
+			"bold": true
+		},
+		{
+			"tag": "⌟",
+			"color": "#002255",
+			"bold": true
+		},
+		{
+			"tag": "!",
+			"color": "#FF2D00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "?",
+			"color": "#3498DB",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "//",
+			"color": "#474747",
+			"strikethrough": true,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "todo",
+			"color": "#FF8C00",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "*",
+			"color": "#98C379",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		}
+	],
+
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
-			//* More subtle Template Tags
+			//* More subtle Template Tags.
 			{
 				"scope": [
 					"punctuation.definition.tag",
@@ -49,7 +121,8 @@
 					"foreground": "#5a86ff36"
 				}
 			},
-			//* Disable Bold & Itallic for all themes
+			//* Disable Bold & Itallic for all themes.
+			// (to stop some themes from forcing all italics)
 			{
 				"scope": [
 					// "comment",
