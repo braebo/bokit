@@ -33,7 +33,7 @@
 
 <style lang="scss">
 	h1 {
-		margin-top: 15vh;
+		margin: 15vh auto 0;
 
 		color: var(--warn);
 
