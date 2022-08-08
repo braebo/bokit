@@ -20,6 +20,8 @@
 
 	"workbench.iconTheme": "material-icon-theme",
 
+	"workbench.editor.labelFormat": "short",
+
 	//* File nesting.
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
