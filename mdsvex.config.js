@@ -1,3 +1,5 @@
+// https://mdsvex.com/docs#options
+
 import autolinkHeadings from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import abbr from 'remark-abbr'

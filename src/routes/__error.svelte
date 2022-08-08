@@ -21,7 +21,7 @@
 </script>
 
 <template lang="pug">
-	
+
 	h1 {status}
 
 	+if('dev')
