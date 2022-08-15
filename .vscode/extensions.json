@@ -9,7 +9,7 @@
 		"aaron-bond.better-comments",
 		"dbaeumer.vscode-eslint",
 		"svelte.svelte-vscode",
-		"silvenon.mdx" //? MDSvex Language Support
+		"unifiedjs.vscode-mdx" //? MDSvex Language Support
 
 		/*
 		 * Honorable mentions
