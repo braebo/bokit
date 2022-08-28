@@ -16,19 +16,21 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"engines": {
 		"npm": ">=8.10.0",
 		"node": ">=16.15.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "1.0.0-next.66",
-		"@sveltejs/kit": "1.0.0-next.405",
-		"@types/node": "18.6.5",
+		"@sveltejs/adapter-vercel": "1.0.0-next.69",
+		"@sveltejs/kit": "1.0.0-next.445",
+		"@types/node": "18.7.13",
 		"autoprefixer": "10.4.8",
-		"cssnano": "5.1.12",
-		"fractils": "2.0.3",
+		"cssnano": "5.1.13",
+		"fractils": "3.0.0",
 		"greset": "2.0.0",
 		"mdsvex": "0.10.6",
 		"postcss": "8.4.16",
@@ -39,11 +41,11 @@
 		"rehype-autolink-headings": "6.1.1",
 		"rehype-slug": "5.0.1",
 		"remark-abbr": "1.4.1",
-		"sass": "1.54.3",
+		"sass": "1.54.5",
 		"svelte": "3.49.0",
 		"svelte-preprocess": "4.10.7",
 		"tslib": "2.4.0",
-		"typescript": "4.7.4",
-		"vite": "3.0.4"
+		"typescript": "4.8.2",
+		"vite": "3.0.9"
 	}
 }

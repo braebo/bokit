@@ -1,33 +1,18 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit'
-
-	export const load: Load = ({ error, status }) => {
-		return {
-			props: {
-				status,
-				error
-			}
-		}
-	}
-</script>
-
 <script lang="ts">
-	import { dev } from '$app/env'
+	import { dev } from '$app/environment'
+	import { page } from '$app/stores'
 
-	export let status: string
-	export let error: Record<string, any>
-
-	if (dev) console.log(error)
+	if (dev) console.log($page.error)
 </script>
 
 <template lang="pug">
 
-	h1 {status}
+	h1 {$page.status}
 
 	+if('dev')
 		.error
-			pre.message {error.message}
-			pre.stack {error.stack}
+			pre.message {$page.error.message}
+			pre.stack {$page.error.stack}
 
 </template>
 
