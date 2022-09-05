@@ -1,6 +1,6 @@
 <section>
 	<a href="/blog" style:padding="2rem">
-		⬅
+		&#8678;
 		<span>Back</span>
 	</a>
 	<slot />
@@ -15,6 +15,8 @@
 	a {
 		position: sticky;
 		top: 0;
+
+		color: var(--dark-a);
 
 		width: fit-content;
 		padding: 1rem !important;
@@ -31,7 +33,7 @@
 	a:hover {
 		opacity: 1;
 		/* background-color: var(--light-d); */
-		color: var(--dark);
+		color: var(--dark-a);
 		outline: 1px solid var(--light-d);
 	}
 
