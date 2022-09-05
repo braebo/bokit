@@ -18,5 +18,5 @@
 		"types": ["node"]
 	},
 	"include": ["src/**/**/**/*.ts", "src/**/*.svelte", "src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/*.d.ts"],
-	"exclude": ["mdsvex.config.js", "node_modules/*", ".svelte-kit/*", ".vercel/*", "build/*", "dist/*"]
+	"exclude": ["mdsvex/mdsvex.config.js", "node_modules/*", ".svelte-kit/*", ".vercel/*", "build/*", "dist/*"]
 }

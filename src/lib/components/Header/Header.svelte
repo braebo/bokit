@@ -1,7 +1,14 @@
 <script lang="ts">
 	import HomeIcon from '$lib/graphics/HomeIcon.svelte'
 	import { mobile, ThemeToggle } from 'fractils'
+	import { setContext } from 'svelte'
 	import { Nav } from './Nav'
+
+	setContext('links', [
+		['/', 'Home'],
+		['/blog', 'Blog'],
+		['/about', 'About']
+	])
 </script>
 
 <template lang="pug">

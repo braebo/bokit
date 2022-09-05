@@ -1,5 +1,3 @@
-@use './media' as *;
-
 .br-xs {
 	height: 0.5rem;
 }
@@ -8,19 +6,19 @@
 }
 .br-md {
 	height: 4rem;
-	@include media('<phone') {
+	@media screen and (max-width: 560px) {
 		height: 3rem;
 	}
 }
 .br-lg {
 	height: 6.5rem;
-	@include media('<phone') {
+	@media screen and (max-width: 560px) {
 		height: 5rem;
 	}
 }
 .br-xl {
 	height: 10rem;
-	@include media('<phone') {
+	@media screen and (max-width: 560px) {
 		height: 6rem;
 	}
 }
@@ -44,12 +42,4 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-}
-
-.card {
-	max-width: min(100%, 100vw);
-	padding: var(--padding);
-
-	border-radius: var(--radius);
-	box-shadow: var(--shadow);
 }

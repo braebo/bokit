@@ -25,13 +25,15 @@
 		"node": ">=16.15.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "1.0.0-next.69",
-		"@sveltejs/kit": "1.0.0-next.445",
-		"@types/node": "18.7.13",
+		"@sveltejs/adapter-vercel": "1.0.0-next.72",
+		"@sveltejs/kit": "1.0.0-next.469",
+		"@types/node": "18.7.14",
 		"autoprefixer": "10.4.8",
 		"cssnano": "5.1.13",
-		"fractils": "3.0.0",
+		"fast-glob": "^3.2.11",
+		"fractils": "3.0.2",
 		"greset": "2.0.0",
+		"just-camel-case": "^6.1.1",
 		"mdsvex": "0.10.6",
 		"postcss": "8.4.16",
 		"postcss-load-config": "4.0.1",
@@ -41,11 +43,13 @@
 		"rehype-autolink-headings": "6.1.1",
 		"rehype-slug": "5.0.1",
 		"remark-abbr": "1.4.1",
-		"sass": "1.54.5",
-		"svelte": "3.49.0",
+		"sass": "1.54.8",
+		"svelte": "3.50.0",
 		"svelte-preprocess": "4.10.7",
 		"tslib": "2.4.0",
 		"typescript": "4.8.2",
-		"vite": "3.0.9"
+		"unist-util-visit": "^4.1.1",
+		"vite": "3.0.9",
+		"vite-imagetools": "^4.0.8"
 	}
 }

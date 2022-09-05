@@ -19,7 +19,7 @@
 				)
 
 					a(
-						sveltekit:prefetch
+						data-sveltekit-prefetch
 						href='{path}'
 					) {title}
 

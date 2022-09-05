@@ -9,7 +9,8 @@
 		"aaron-bond.better-comments",
 		"dbaeumer.vscode-eslint",
 		"svelte.svelte-vscode",
-		"unifiedjs.vscode-mdx" //? MDSvex Language Support
+		"unifiedjs.vscode-mdx", //? MDSvex Language Support
+		"mattpocock.ts-error-translator"
 
 		/*
 		 * Honorable mentions

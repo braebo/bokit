@@ -1,15 +1,8 @@
-@use './media' as *;
-@import './font.scss';
+@import './card.css';
 @import './theme.scss';
 @import './utils.scss';
 @import './elements.scss';
 @import './input/input.scss';
-
-$breakpoints: (
-	phone: 560px,
-	tablet: 768px,
-	desktop: 1024px
-);
 
 :root {
 	--font-xxs: 0.75rem;
@@ -32,12 +25,14 @@ $breakpoints: (
 
 	--padding: 1.5rem;
 
-	--shadow-sm: 0px 0.5px 0.75px rgba(0, 0, 0, 0.02), 0px 2px 1.5px rgba(0, 0, 0, 0.02), 0px 2.5px 2px rgba(0, 0, 0, 0.025),
-		0px 3px 3px rgba(0, 0, 0, 0.05), 0px 5px 5px rgba(0, 0, 0, 0.05), 0px 7px 10px rgba(0, 0, 0, 0.075);
+	--shadow-sm: 0px 0.5px 0.75px rgba(0, 0, 0, 0.02), 0px 2px 1.5px rgba(0, 0, 0, 0.02),
+		0px 2.5px 2px rgba(0, 0, 0, 0.025), 0px 3px 3px rgba(0, 0, 0, 0.05), 0px 5px 5px rgba(0, 0, 0, 0.05),
+		0px 7px 10px rgba(0, 0, 0, 0.075);
 	--shadow: 0px 0.75px 1px rgba(0, 0, 0, 0.015), 0px 2.5px 2px rgba(0, 0, 0, 0.02), 0px 4.5px 3px rgba(0, 0, 0, 0.025),
 		0px 5px 5px rgba(0, 0, 0, 0.0325), 0px 10px 10px rgba(0, 0, 0, 0.045), 0px 10px 20px rgba(0, 0, 0, 0.05);
-	--shadow-lg: 0px 1.25px 1px rgba(0, 0, 0, 0.035), 0px 2.5px 2.5px rgba(0, 0, 0, 0.04), 0px 4.5px 5px rgba(0, 0, 0, 0.045),
-		0px 5px 8px rgba(0, 0, 0, 0.05), 0px 10px 15px rgba(0, 0, 0, 0.06), 0px 20px 30px rgba(0, 0, 0, 0.07);
+	--shadow-lg: 0px 1.25px 1px rgba(0, 0, 0, 0.035), 0px 2.5px 2.5px rgba(0, 0, 0, 0.04),
+		0px 4.5px 5px rgba(0, 0, 0, 0.045), 0px 5px 8px rgba(0, 0, 0, 0.05), 0px 10px 15px rgba(0, 0, 0, 0.06),
+		0px 20px 30px rgba(0, 0, 0, 0.07);
 }
 
 body {
@@ -46,7 +41,7 @@ body {
 
 	background-color: var(--light-a);
 
-	transition: color 0.5s background 0.3s background-color 0.3s;
+	transition: color 0.5s, background-color 0.3s;
 }
 
 #svelte {

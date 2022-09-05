@@ -1,4 +1,4 @@
-//*	RUBIK  -  Variable Font (wght)
+/*	RUBIK  -  Variable Font (wght) */
 @font-face {
 	font-family: 'rubik';
 	font-weight: 100 900;
@@ -12,7 +12,7 @@
 	src: url('/fonts/rubik/rubik-italic.ttf') format('truetype');
 }
 
-//*	RED HAT TEXT  -  Varitable Font (wght)
+/* RED HAT TEXT  -  Varitable Font (wght) */
 @font-face {
 	font-family: 'red_hat_text';
 	font-weight: 100 900;
@@ -26,7 +26,7 @@
 	src: url('/fonts/red_hat_text/red_hat_text-italic.ttf') format('truetype');
 }
 
-//*	inconsolata  -  Variable Font (wght)
+/* INCONSOLATA  -  Variable Font (wght) */
 @font-face {
 	font-family: 'dosis';
 	font-weight: 100 900;
@@ -34,7 +34,7 @@
 	src: url('/fonts/dosis/dosis.ttf') format('truetype');
 }
 
-//*	INCONSOLATA  -  Variable Font (wght, wdth)
+/* INCONSOLATA  -  Variable Font (wght, wdth) */
 @font-face {
 	font-family: 'inconsolata';
 	font-weight: 100 900;
