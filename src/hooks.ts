@@ -1,8 +1,5 @@
-// import type { Handle } from '@sveltejs/kit'
+import type { Handle } from '@sveltejs/kit'
 
-// export const handle: Handle = async ({ event, resolve }) => {
-// 	const response = await resolve(event, {
-// 		ssr: true, // disable SSR here for SPA
-// 	})
-// 	return response
-// }
+export const handle: Handle = async ({ event, resolve }) => {
+	return await resolve(event)
+}
