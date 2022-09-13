@@ -5,11 +5,13 @@
 		"*.svg": "html" //* Prettier
 	},
 
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-
-	"editor.formatOnSave": true,
+	"[typescript, javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 
 	"[svelte]": {
+		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 

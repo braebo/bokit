@@ -6,11 +6,12 @@
 		"christian-kohler.path-intellisense",
 		"ms-vscode.vscode-typescript-next",
 		"fivethree.vscode-svelte-snippets",
+		"mattpocock.ts-error-translator",
 		"aaron-bond.better-comments",
+		"zokugun.explicit-folding",
 		"dbaeumer.vscode-eslint",
 		"svelte.svelte-vscode",
-		"unifiedjs.vscode-mdx", //? MDSvex Language Support
-		"mattpocock.ts-error-translator"
+		"unifiedjs.vscode-mdx" // MDSvex Language Support
 
 		/*
 		 * Honorable mentions
