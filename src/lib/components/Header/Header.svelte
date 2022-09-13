@@ -6,7 +6,6 @@
 
 	setContext('links', [
 		['/', 'Home'],
-		['/blog', 'Blog'],
 		['/about', 'About']
 	])
 </script>
