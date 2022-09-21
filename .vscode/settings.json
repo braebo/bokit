@@ -245,6 +245,7 @@
 		"**/CVS": true,
 		"**/.DS_Store": true,
 		"**/Thumbs.db": true,
-		"**.svelte-kit": true
-	}
+		"**.svelte-kit": false
+	},
+	"explorerExclude.backup": {}
 }
