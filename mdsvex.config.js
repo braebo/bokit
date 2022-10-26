@@ -1,6 +1,4 @@
 // https://mdsvex.com/docs#options
-import mdsvexFrontmatterToImport from './mdsvex-frontmatter-to-import.js'
-import mdsvexUrlToImport from './mdsvex-url-to-import.js'
 import autolinkHeadings from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import abbr from 'remark-abbr'
@@ -11,7 +9,7 @@ const mdsvexConfig = {
 	smartypants: {
 		dashes: 'oldschool'
 	},
-	remarkPlugins: [mdsvexUrlToImport, mdsvexFrontmatterToImport, abbr],
+	remarkPlugins: [abbr],
 	rehypePlugins: [
 		slug,
 		[

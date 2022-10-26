@@ -1,4 +1,4 @@
-import mdsvexConfig from './mdsvex/mdsvex.config.js'
+import mdsvexConfig from './mdsvex.config.js'
 import vercel from '@sveltejs/adapter-vercel'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
