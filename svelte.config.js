@@ -14,13 +14,15 @@ const config = {
 	],
 	kit: { adapter: vercel() },
 	vitePlugin: {
-		// https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#inspector
-		inspector: {
-			toggleButtonPos: 'bottom-left',
-			toggleKeyCombo: 'meta-shift',
-			showToggleButton: 'always',
-			holdMode: true
-		}
+		experimental: {
+			// https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#inspector
+			inspector: {
+				toggleButtonPos: 'bottom-left',
+				toggleKeyCombo: 'meta-shift',
+				showToggleButton: 'active',
+				holdMode: true,
+			},
+		},
 	}
 }
 
