@@ -3,10 +3,10 @@ input[type='number'] {
 	padding: 1px 0 1px 6px;
 	margin-right: 0.5rem;
 
-	background: var(--light-a);
-	color: var(--dark-a);
+	background: var(--bg-a);
+	color: var(--fg-a);
 	outline: none;
-	border: 1px solid var(--light-b);
+	border: 1px solid var(--bg-b);
 	border-radius: var(--radius);
 
 	font-size: var(--font-xxs);

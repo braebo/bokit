@@ -8,7 +8,7 @@ h2 {
 
 h1,
 h2 {
-	color: var(--dark-a);
+	color: var(--fg-a);
 
 	font-weight: 500;
 	letter-spacing: 1.2px;
@@ -17,7 +17,7 @@ h2 {
 
 p,
 li {
-	color: var(--dark-a, --text-color);
+	color: var(--fg-a, --text-color);
 
 	font-size: var(--font);
 	font-weight: 200;
@@ -28,15 +28,15 @@ li {
 	}
 
 	& a {
-		color: var(--dark-c);
+		color: var(--fg-c);
 	}
 }
 
 a {
-	color: var(--dark-a);
+	color: var(--fg-a);
 
 	text-decoration: underline;
-	text-decoration-color: var(--light-d);
+	text-decoration-color: var(--bg-d);
 
 	&:hover {
 		text-decoration: underline;
@@ -49,7 +49,7 @@ pre {
 	height: max-content;
 	padding: 0.5em;
 
-	color: var(--dark-a);
+	color: var(--fg-a);
 	border-radius: 3px;
 
 	font-size: 16px;

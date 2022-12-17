@@ -12,12 +12,12 @@ input[type='range']::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 15px;
 
-	border: 0.5px solid var(--light-a);
+	border: 0.5px solid var(--bg-a);
 	&:hover {
-		border-color: var(--light-d);
+		border-color: var(--bg-d);
 	}
 	border-radius: 50px;
-	background: var(--light-b);
+	background: var(--bg-b);
 
 	cursor: pointer;
 
@@ -28,9 +28,9 @@ input[type='range']::-webkit-slider-thumb {
 	height: 12px;
 	margin-top: 1px;
 
-	border: 1px solid var(--light-a);
+	border: 1px solid var(--bg-a);
 	border-radius: 20px;
-	background: var(--dark-d);
+	background: var(--fg-d);
 	background-image: radial-gradient(ellipse at var(--progress) var(--progress), blue, red);
 
 	cursor: pointer;

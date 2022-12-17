@@ -70,7 +70,7 @@
 	li {
 		list-style: none;
 
-		color: var(--dark-a);
+		color: var(--fg-a);
 	}
 
 	a {

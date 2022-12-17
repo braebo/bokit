@@ -14,7 +14,7 @@
 		width: 50px;
 		height: 50px;
 
-		background-color: var(--light-b);
+		background-color: var(--bg-b);
 		border-radius: 100%;
 		opacity: 0;
 		/* backdrop-filter: blur(30px); */

@@ -70,7 +70,7 @@
 		width: $size;
 		height: $size;
 
-		color: var(--dark-b);
+		color: var(--fg-b);
 
 		&:hover {
 			& .blinds {

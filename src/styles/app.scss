@@ -1,4 +1,4 @@
-@import './card.css';
+@import './card.scss';
 @import './theme.scss';
 @import './utils.scss';
 @import './elements.scss';
@@ -39,12 +39,12 @@ body {
 	min-height: 100vh;
 	margin: 0;
 
-	background-color: var(--light-a);
+	// background-color: var(--bg-a);
 
-	transition: color 0.5s, background-color 0.3s;
+	transition: color 0.5s, background-color 0.1s;
 }
 
-#svelte {
+#frackit {
 	display: flex;
 	flex-direction: column;
 }
