@@ -1,14 +1,26 @@
 <script lang="ts">
+	import type { PageData } from './$types'
+	
 	import 'greset/greset.css'
-
+	
+	import { onMount, onDestroy } from 'svelte'
+	import { Fractils, theme } from 'fractils'
+	import { browser } from '$app/environment'
 	import { Header } from '$lib/components'
 	import { pageTitle } from '$lib/utils'
-	import { Fractils } from 'fractils'
 	import { page } from '$app/stores'
+	import { parse } from 'cookie'
 	import '../styles/app.scss'
 
 	// Refreshes the page title on navigation
 	$: title = pageTitle($page.url.pathname)
+
+	export let data: PageData
+	let _theme = data.theme
+
+	$: if (browser && $theme !== parse(document.cookie).theme) {
+		document.cookie = `theme=${$theme}`
+	}
 </script>
 
 <template lang="pug">

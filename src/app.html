@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html theme="%frackit.theme%" lang="en">
 	<head>
 		<!-- 𓏲	-->
 
@@ -44,9 +44,15 @@
 		<link rel="preload" as="font" crossorigin="true" href="/fonts/red_hat_text/red_hat_text.ttf" />
 		<link rel="preload" as="font" crossorigin="true" href="/fonts/inconsolata/inconsolata.ttf" />
 
+		<style>
+			body {
+				background-color: var(--bg-a);
+			}
+		</style>
+
 		%sveltekit.head%
 	</head>
 	<body>
-		<div id="svelte">%sveltekit.body%</div>
+		<div id="frackit" style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
