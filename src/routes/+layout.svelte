@@ -11,12 +11,13 @@
 	import { page } from '$app/stores'
 	import { parse } from 'cookie'
 	import '../styles/app.scss'
+	
+	export let data: PageData
+	let _theme = data.theme
 
 	// Refreshes the page title on navigation
 	$: title = pageTitle($page.url.pathname)
 
-	export let data: PageData
-	let _theme = data.theme
 
 	$: if (browser && $theme !== parse(document.cookie).theme) {
 		document.cookie = `theme=${$theme}`
