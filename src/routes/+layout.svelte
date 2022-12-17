@@ -18,7 +18,6 @@
 	// Refreshes the page title on navigation
 	$: title = pageTitle($page.url.pathname)
 
-
 	$: if (browser && $theme !== parse(document.cookie).theme) {
 		document.cookie = `theme=${$theme}`
 	}
