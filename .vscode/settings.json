@@ -10,15 +10,17 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
-	"[svelte]": {
-		"editor.formatOnSave": false,
-		"editor.defaultFormatter": "svelte.svelte-vscode"
-	},
-
 	"[glsl]": {
 		"editor.formatOnSave": false,
 		"editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
 	},
+
+	"[svelte]": {
+		"editor.formatOnSave": false,
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"svelte.enable-ts-plugin": true,
+	"svelte.plugin.css.globals": "src/styles/theme.scss, src/styles/app.scss",
 
 	"workbench.iconTheme": "material-icon-theme",
 
