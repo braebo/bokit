@@ -9,13 +9,13 @@
 		<meta name="theme-color" content="#00d0ff" />
 
 		<!-- Icons -->
-		<link rel="icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png" />
 
 		<!-- PWA -->
-		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
 		<meta name="msapplication-config" content="/browserconfig.xml" />
 		<meta name="msapplication-TileColor" content="#1d1d1d" />
 
@@ -33,16 +33,17 @@
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://frackit.vercel.app" />
-		<meta property="twitter:title" content="Frackit" />
-		<meta property="twitter:description" content="Fractal's Sveltekit starter template." />
+		<meta property="twitter:title" content="frackit" />
+		<meta property="twitter:description" content="Opinionated sveltekit starter template." />
 		<meta property="twitter:image" content="https://frackit.vercel.app/screenshot.png" />
 
 		<!-- Font -->
-		<link rel="stylesheet" href="/fonts/font.css" />
-		<link rel="preload" as="font" crossorigin="true" href="/fonts/rubik/rubik.ttf" />
-		<link rel="preload" as="font" crossorigin="true" href="/fonts/dosis/dosis.ttf" />
-		<link rel="preload" as="font" crossorigin="true" href="/fonts/red_hat_text/red_hat_text.ttf" />
-		<link rel="preload" as="font" crossorigin="true" href="/fonts/inconsolata/inconsolata.ttf" />
+		<link rel="stylesheet" href="%sveltekit.assets%/fonts/font.css" />
+		<link rel="preload" href="%sveltekit.assets%/fonts/mona_sans/mona_sans.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" as="font" crossorigin="true" href="%sveltekit.assets%/fonts/rubik/rubik.ttf" />
+		<link rel="preload" as="font" crossorigin="true" href="%sveltekit.assets%/fonts/dosis/dosis.ttf" />
+		<link rel="preload" as="font" crossorigin="true" href="%sveltekit.assets%/fonts/red_hat_text/red_hat_text.ttf" />
+		<link rel="preload" as="font" crossorigin="true" href="%sveltekit.assets%/fonts/inconsolata/inconsolata.ttf" />
 
 		<style>
 			body {
