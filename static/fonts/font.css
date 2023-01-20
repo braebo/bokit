@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'mona';
+	src:
+	  url('/fonts/mona_sans/mona_sans.woff2') format('woff2 supports variations'),
+	  url('/fonts/mona_sans/mona_sans.woff2') format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
+
 /*	RUBIK  -  Variable Font (wght) */
 @font-face {
 	font-family: 'rubik';
@@ -6,7 +15,7 @@
 	src: url('/fonts/rubik/rubik.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'rubik-italic';
+	font-family: 'rubik_italic';
 	font-weight: 100 900;
 	font-style: italic;
 	src: url('/fonts/rubik/rubik-italic.ttf') format('truetype');
@@ -43,10 +52,21 @@
 }
 
 :root {
-	--font-a: 'rubik', sans-serif;
-	--font-b: 'dosis', sans-serif;
-	--font-c: 'red_hat_text', sans-serif;
-	--font-mono: 'mono', monospace;
+	--font-a: 'mona', sans-serif;
+	--font-b: 'rubik', sans-serif;
+	--font-c: 'dosis', sans-serif;
+	--font-d: 'red_hat_text', sans-serif;
+	--font-mono: 'inconsolata', monospace;
+
+	--font-xxs: 0.75rem;
+	--font-xs: 0.9rem;
+	--font-sm: 1rem;
+	--font: 1.1rem;
+	--font-md: clamp(1rem, 5vw, 1.25rem);
+	--font-lg: clamp(1.25rem, 5vw, 1.75rem);
+	--font-xl: clamp(1.5rem, 6vw, 2.25rem);
+	--font-xxl: clamp(1.75rem, 7vw, 3rem);
+	--font-xxxl: clamp(3rem, 10vw, 5rem);
 }
 
 a,
