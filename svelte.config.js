@@ -1,3 +1,4 @@
+import { awesomePugPre, awesomePugPost } from 'svelte-awesome-pug'
 import mdsvexConfig from './mdsvex.config.js'
 import vercel from '@sveltejs/adapter-vercel'
 import preprocess from 'svelte-preprocess'
@@ -7,9 +8,11 @@ import { mdsvex } from 'mdsvex'
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	preprocess: [
+		awesomePugPre,
 		preprocess({
 			postcss: true
 		}),
+		awesomePugPost,
 		mdsvex(mdsvexConfig)
 	],
 	kit: { adapter: vercel() },
@@ -20,9 +23,9 @@ const config = {
 				toggleButtonPos: 'bottom-left',
 				toggleKeyCombo: 'meta-shift',
 				showToggleButton: 'active',
-				holdMode: true,
-			},
-		},
+				holdMode: true
+			}
+		}
 	}
 }
 
