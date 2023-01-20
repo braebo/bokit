@@ -16,7 +16,7 @@ Pre-configured with:
 -   [Prettier](https://prettier.io/)
 -   [Greset](https://github.com/ghostdevv/greset)
 -   [SCSS](https://sass-lang.com/)
--   [Pug](https://github.com/pugjs/pug)
+-   [Pug](https://github.com/Refzlund/svelte-awesome-pug)
 
 </section>
 
