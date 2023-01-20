@@ -29,8 +29,6 @@
 	nav {
 		display: flex;
 		justify-content: center;
-
-		padding: 2rem;
 	}
 
 	ul {
@@ -54,11 +52,11 @@
 
 		color: currentColor;
 
-		font-size: 1.2rem;
-		font-weight: 700;
+		font-size: var(--font-sm);
+		font-weight: 300;
 		text-transform: uppercase;
 		text-decoration: none;
-		letter-spacing: 10%;
+		letter-spacing: 0.25rem;
 
 		transition: color 0.15s linear;
 	}

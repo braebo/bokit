@@ -12,7 +12,10 @@
 
 <template lang="pug">
 
-		.burger(use:clickOutside!='{{ whitelist: ["wrapper"] }}' on:outclick!='{() => showMenu = false}')
+		.burger(
+			use:clickOutside!='{{ whitelist: ["wrapper"] }}'
+			on:outclick!='{() => showMenu = false}'
+		)
 			Burger(bind:showMenu)
 
 		PageFill(bind:showMenu)
