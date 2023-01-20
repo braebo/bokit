@@ -5,20 +5,19 @@
 		"*.svg": "html" //* Prettier
 	},
 
-	"[typescript, javascript]": {
-		"editor.formatOnSave": true,
+	"[typescript, javascript, html]": {
+		"editor.formatOnSave": false,
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
 	"[glsl]": {
-		"editor.formatOnSave": false,
 		"editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
 	},
 
 	"[svelte]": {
-		"editor.formatOnSave": false,
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
+
 	"svelte.enable-ts-plugin": true,
 	"svelte.plugin.css.globals": "src/styles/theme.scss, src/styles/app.scss",
 
