@@ -1,7 +1,5 @@
-<template lang="pug">
+<script>
+	import Hello from '$lib/components/Hello.svelte'
+</script>
 
-	section
-
-		h1.card Hello 🌎
-
-</template>
+<Hello />
