@@ -4,7 +4,6 @@
 		 * Important extentions
 		 */
 		"christian-kohler.path-intellisense",
-		"ms-vscode.vscode-typescript-next",
 		"fivethree.vscode-svelte-snippets",
 		"mattpocock.ts-error-translator",
 		"aaron-bond.better-comments",
