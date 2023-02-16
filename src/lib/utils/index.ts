@@ -1,1 +1,0 @@
-export { pageTitle } from './pageTitle'
