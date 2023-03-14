@@ -4,7 +4,6 @@
 		 * Important extentions
 		 */
 		"christian-kohler.path-intellisense",
-		"fivethree.vscode-svelte-snippets",
 		"aaron-bond.better-comments",
 		"zokugun.explicit-folding",
 		"dbaeumer.vscode-eslint",
