@@ -1,7 +1,7 @@
 {
 	"name": "frackit",
 	"version": "0.0.1",
-	"description": "Opinionated sveltekit starter template.",
+	"description": "Opinionated SvelteKit starter template.",
 	"keywords": [
 		"sveltekit",
 		"template",
