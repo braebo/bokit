@@ -1,8 +1,7 @@
 @font-face {
 	font-family: 'mona';
-	src:
-	  url('/fonts/mona_sans/mona_sans.woff2') format('woff2 supports variations'),
-	  url('/fonts/mona_sans/mona_sans.woff2') format('woff2-variations');
+	src: url('/fonts/mona_sans/mona_sans.woff2') format('woff2 supports variations'),
+		url('/fonts/mona_sans/mona_sans.woff2') format('woff2-variations');
 	font-weight: 200 900;
 	font-stretch: 75% 125%;
 }
@@ -67,6 +66,12 @@
 	--font-xl: clamp(1.5rem, 6vw, 2.25rem);
 	--font-xxl: clamp(1.75rem, 7vw, 3rem);
 	--font-xxxl: clamp(3rem, 10vw, 5rem);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 a,
@@ -78,9 +83,10 @@ h3,
 h4,
 h5,
 section {
-	font-family: var(--font-a);
+	font-family: var(--font-a, system-ui, Inter, Avenir, Helvetica, Arial, sans-serif);
 }
 
-pre, code {
-	font-family: var(--font-mono);
+pre,
+code {
+	font-family: var(--font-mono, system-ui, monospace);
 }
