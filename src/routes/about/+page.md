@@ -1,15 +1,19 @@
-<section>
+<script>
+	import { fadeOut, fadeIn } from '$lib/utils'
+</script>
+
+<section in:fadeIn out:fadeOut>
 
 ### An opinionated starter template for Sveltekit
 
 Pre-configured with:
 
--   Dynamic Page Title
 -   [Auto Link Headings](https://github.com/rehypejs/rehype-autolink-headings)
+-   Dynamic Page Title
 -   Mobile Menu
 -   [Autoprefixer](https://github.com/postcss/autoprefixer)
--   [Typescript](https://www.typescriptlang.org/)
 -   [Dark Mode](https://fractils.fractal-hq.com/#theme)
+-   [Typescript](https://www.typescriptlang.org/)
 -   [CSSNano](https://cssnano.co/)
 -   [MDSvex](https://mdsvex.com/)
 -   [Stylelint](https://stylelint.io/)

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition'
+	import { fadeOut, fadeIn } from '$lib/utils'
 </script>
 
 <template lang="pug">
 
-	section
+	section(in:fadeIn out:fadeOut)
 		h1
 			+each('"Hello" as letter')
 				.letter {letter}
@@ -33,7 +33,7 @@
 
 		min-width: 7rem;
 	}
-	
+
 	.letter {
 		position: relative;
 
