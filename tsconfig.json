@@ -7,7 +7,7 @@
 		"strict": true,
 		"moduleResolution": "node",
 		"module": "es2020",
-		"lib": ["es2020"],
+		"lib": ["es2020", "DOM", "DOM.Iterable"],
 		"target": "es2019",
 		"importsNotUsedAsValues": "error",
 		"isolatedModules": true,
