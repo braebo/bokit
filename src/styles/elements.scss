@@ -72,6 +72,6 @@ section {
 	flex-direction: column;
 	gap: var(--padding);
 
-	max-width: var(--page-width);
+	max-width: min(var(--page-width), 90vw);
 	margin: 0 auto;
 }
