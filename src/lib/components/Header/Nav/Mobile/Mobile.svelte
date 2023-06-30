@@ -36,8 +36,8 @@
 
 						li(
 							class:active='{$page.url.pathname === path}'
-							in:fly='{{ y: -10 - (5 * i) }}'
-							out:fade='{{ duration: 50 }}'
+							in:fly|global='{{ y: -10 - (5 * i) }}'
+							out:fade|global='{{ duration: 50 }}'
 						)
 
 							a(

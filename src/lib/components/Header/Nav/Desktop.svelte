@@ -15,7 +15,7 @@
 
 				li(
 					class:active='{$page.url.pathname === path}'
-					transition:fly='{{ y: -10 - (5 * i) }}'
+					transition:fly|global='{{ y: -10 - (5 * i) }}'
 				)
 
 					a(
