@@ -11,7 +11,7 @@
 	import { parse } from 'cookie'
 	import '../styles/app.scss'
 
-	// Keeps the theme cookie in sync
+	// Keeps the theme cookie in sync.
 	export let data: PageData
 	let _theme = data.theme
 	$: if (browser && $theme !== parse(document.cookie).theme) {
