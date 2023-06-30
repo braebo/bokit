@@ -27,7 +27,6 @@
 		justify-content: space-between;
 
 		z-index: 50;
-
 	}
 	
 	.corner {
@@ -36,8 +35,8 @@
 		align-items: center;
 		justify-content: center;
 
-		width: 3rem;
-		height: 3rem;
+		width: 4rem;
+		height: 4rem;
 	}
 
 	#theme {

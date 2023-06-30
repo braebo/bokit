@@ -52,8 +52,6 @@
 	nav {
 		display: flex;
 		justify-content: center;
-
-		padding: 2rem;
 	}
 
 	ul {
