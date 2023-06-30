@@ -41,7 +41,7 @@
 						)
 
 							a(
-								on:pointerdown='{() => (showMenu = false)}'
+								on:click='{() => (showMenu = false)}'
 								data-sveltekit-prefetch
 								href='{path}'
 							) {title}
