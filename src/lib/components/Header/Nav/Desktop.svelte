@@ -29,6 +29,8 @@
 	nav {
 		display: flex;
 		justify-content: center;
+
+		pointer-events: none;
 	}
 
 	ul {
@@ -59,6 +61,7 @@
 		letter-spacing: 0.25rem;
 
 		transition: color 0.15s linear;
+		pointer-events: all;
 	}
 
 	a:hover {
