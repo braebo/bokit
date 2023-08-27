@@ -6,7 +6,6 @@
 		"christian-kohler.path-intellisense",
 		"aaron-bond.better-comments",
 		"zokugun.explicit-folding",
-		"dbaeumer.vscode-eslint",
 		"svelte.svelte-vscode",
 		"unifiedjs.vscode-mdx" // MDSvex Language Support
 
