@@ -1,6 +1,6 @@
 import { awesomePugPre, awesomePugPost } from 'svelte-awesome-pug'
 import mdsvexConfig from './mdsvex.config.js'
-import vercel from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 
@@ -15,7 +15,7 @@ const config = {
 		awesomePugPost,
 		mdsvex(mdsvexConfig)
 	],
-	kit: { adapter: vercel() },
+	kit: { adapter: adapter() },
 	vitePlugin: {
 		inspector: {
 			toggleButtonPos: 'bottom-left',

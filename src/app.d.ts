@@ -1,24 +1,17 @@
-/// <reference types="@sveltejs/kit" />
+/// <reference types="mdsvex/globals" />
 
-// See https://kit.svelte.dev/docs#typescript
+// See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-declare namespace App {
-	interface Locals {
-		theme: 'light' | 'dark' | 'system';
+declare global {
+	namespace App {
+		interface Locals {
+			theme: 'light' | 'dark' | 'system'
+		}
+		interface PageData {
+			theme: 'light' | 'dark' | 'system'
+		}
+		// interface Platform {}
 	}
-	interface PageData {
-		theme: 'light' | 'dark' | 'system';
-	}
-	// interface Platform {}
-	// interface Session {}
-	// interface Stuff {}
 }
 
-/**
- * * Note:
- * * This file will break if you use import statements, instead do a import() call in your code. For Example:
- * *
- * * interface Stuff {
- * *     test: import('package').SomeProperty;
- * * }
- */
+export {}

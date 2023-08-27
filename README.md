@@ -20,9 +20,9 @@ npm run dev
 
 ### cusomize
 
-- Generate static files with [realfavicongenerator](https://realfavicongenerator.net/) and drop the result into `/static` to replace content like icons / pwa metadata with your own.
+-   Generate static files with [realfavicongenerator](https://realfavicongenerator.net/) and drop the result into `/static` to replace content like icons / pwa metadata with your own.
 
-- Generate metatags [here](https://metatags.io/) and paste them into `/src/app.html` to replace the meta with your own.
+-   Generate metatags [here](https://metatags.io/) and paste them into `/src/app.html` to replace the meta with your own.
 
 ### features
 
