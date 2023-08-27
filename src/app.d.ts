@@ -5,13 +5,13 @@
 declare global {
 	namespace App {
 		interface Locals {
-			theme: 'light' | 'dark' | 'system';
+			theme: 'light' | 'dark' | 'system'
 		}
 		interface PageData {
-			theme: 'light' | 'dark' | 'system';
+			theme: 'light' | 'dark' | 'system'
 		}
 		// interface Platform {}
 	}
 }
 
-export {};
+export {}
