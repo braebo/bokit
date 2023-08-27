@@ -1,5 +1,6 @@
 {
 	"name": "frackit",
+	"private": true,
 	"version": "0.0.1",
 	"description": "Opinionated SvelteKit starter template.",
 	"keywords": [
@@ -18,7 +19,7 @@
 		"extras": "pnpm i -D type-fest froebel nanostores rxjs",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"postinstall": "svelte-kit sync",
-		"lint": "prettier --check . --plugin-search-dir . && eslint --ignore-path .gitignore .",
+		"lint": "prettier --check . --plugin-search-dir .",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"test:unit": "vitest"
@@ -29,13 +30,9 @@
 		"@sveltejs/kit": "^1.23.0",
 		"@types/cookie": "^0.5.1",
 		"@types/node": "20.5.6",
-		"@typescript-eslint/eslint-plugin": "^6.4.1",
-		"@typescript-eslint/parser": "^6.4.1",
 		"autoprefixer": "10.4.15",
 		"cookie": "^0.5.0",
 		"cssnano": "6.0.1",
-		"eslint": "^8.48.0",
-		"eslint-config-prettier": "^9.0.0",
 		"fractils": "3.1.2",
 		"greset": "2.0.0",
 		"mdsvex": "0.11.0",
@@ -60,8 +57,5 @@
 	"engines": {
 		"node": ">=18.0.0",
 		"npm": ">=9.0.0"
-	},
-	"dependencies": {
-		"eslint-plugin-svelte": "^2.33.0"
 	}
 }
