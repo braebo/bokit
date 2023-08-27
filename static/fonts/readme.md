@@ -1,1 +1,0 @@
-TODO: Don't forget to delete unused fonts!
