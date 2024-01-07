@@ -45,7 +45,7 @@ a {
 }
 
 pre {
-	max-width: 100%;
+	max-width: min(100%, 100vw);
 	height: max-content;
 	padding: 0.5em;
 

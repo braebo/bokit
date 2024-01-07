@@ -6,7 +6,8 @@
 	import Desktop from './Desktop.svelte'
 
 	setContext('links', [
-		['/about', 'About']
+		['/about', 'About'],
+		['/contact', 'Contact'],
 	])
 </script>
 
