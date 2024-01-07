@@ -2,14 +2,13 @@
 	import { fadeOut, fadeIn } from '$lib/utils'
 </script>
 
-<template lang="pug">
-
-	section(in:fadeIn out:fadeOut)
-		h1
-			+each('"Hello" as letter')
-				.letter {letter}
-
-</template>
+<section in:fadeIn out:fadeOut>
+	<h1>
+		{#each 'Hello' as letter}
+			<div class="letter">{letter}</div>
+		{/each}
+	</h1>
+</section>
 
 <style lang="scss">
 	section {
@@ -29,7 +28,9 @@
 
 		font-size: var(--font-xl);
 		font-family: var(--font-a);
-		font-variation-settings: 'wght' 900, 'wdth' 125;
+		font-variation-settings:
+			'wght' 900,
+			'wdth' 125;
 
 		min-width: 7rem;
 	}
@@ -65,12 +66,16 @@
 		0% {
 			opacity: 0;
 			transform: translateX(1rem);
-			font-variation-settings: 'wght' 100, 'wdth' 125;
+			font-variation-settings:
+				'wght' 100,
+				'wdth' 125;
 		}
 		100% {
 			opacity: 1;
 			transform: translateX(0);
-			font-variation-settings: 'wght' 500, 'wdth' 100;
+			font-variation-settings:
+				'wght' 500,
+				'wdth' 100;
 		}
 	}
 </style>

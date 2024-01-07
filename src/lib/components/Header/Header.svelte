@@ -5,21 +5,21 @@
 	import Nav from './Nav/Nav.svelte'
 </script>
 
-<template lang="pug">
+<header>
+	<div id="home" class="corner">
+		<a href="/" class:active={$page.url.pathname === '/'}>
+			<HomeIcon />
+		</a>
+	</div>
 
-	header
+	<Nav />
 
-		#home.corner
-			a(href='/' class:active='{$page.url.pathname === "/"}')
-				HomeIcon
-
-		Nav
-
-		+if('!$mobile')
-			#theme.corner(class:mobile={$mobile})
-				ThemeToggle
-
-</template>
+	{#if !$mobile}
+		<div id="theme" class="corner" class:mobile={$mobile}>
+			<ThemeToggle />
+		</div>
+	{/if}
+</header>
 
 <style lang="scss">
 	header {
@@ -28,7 +28,7 @@
 
 		z-index: 50;
 	}
-	
+
 	.corner {
 		display: flex;
 		position: relative;
@@ -50,11 +50,11 @@
 			filter: saturate(1);
 		}
 	}
-	
+
 	.mobile {
 		right: 4rem;
 	}
-	
+
 	.active {
 		color: var(--brand-a);
 	}

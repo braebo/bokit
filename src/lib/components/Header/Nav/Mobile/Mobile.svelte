@@ -6,47 +6,35 @@
 	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
 
-	const links = getContext('links')
+	const links = getContext<string[]>('links')
 	export let showMenu = false
 </script>
 
-<template lang="pug">
+<div class="burger" use:clickOutside={{ whitelist: ['wrapper'] }} on:outclick={() => (showMenu = false)}>
+	<Burger bind:showMenu />
+</div>
 
-		.burger(
-			use:clickOutside!='{{ whitelist: ["wrapper"] }}'
-			on:outclick!='{() => showMenu = false}'
-		)
-			Burger(bind:showMenu)
+<PageFill bind:showMenu />
 
-		PageFill(bind:showMenu)
+{#if showMenu}
+	<div id="theme" class="corner">
+		<ThemeToggle />
+	</div>
 
-		+if('showMenu')
-
-			#theme.corner
-				ThemeToggle
-
-			nav(
-				class:showMenu
-				class:mobile='{$mobile}'
-			)
-
-				ul
-
-					+each('links as [path, title], i (title)')
-
-						li(
-							class:active='{$page.url.pathname === path}'
-							in:fly|global='{{ y: -10 - (5 * i) }}'
-							out:fade|global='{{ duration: 50 }}'
-						)
-
-							a(
-								on:click='{() => (showMenu = false)}'
-								data-sveltekit-prefetch
-								href='{path}'
-							) {title}
-
-</template>
+	<nav class:showMenu class:mobile={$mobile}>
+		<ul>
+			{#each links as [path, title], i (title)}
+				<li
+					class:active={$page.url.pathname === path}
+					in:fly|global={{ y: -10 - 5 * i }}
+					out:fade|global={{ duration: 50 }}
+				>
+					<a on:click={() => (showMenu = false)} data-sveltekit-prefetch href={path}>{title}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
+{/if}
 
 <style>
 	nav {
