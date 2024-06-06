@@ -5,16 +5,17 @@
 	if (dev) console.log($page.error)
 </script>
 
-<template lang="pug">
+<h1>{$page.status}</h1>
 
-	h1 {$page.status}
-
-	+if('dev')
-		.error
-			pre.message {$page.error.message}
-			pre.stack {$page.error.stack}
-
-</template>
+{#if dev}
+	<div class="error">
+		<pre class="message">{$page.error?.message}</pre>
+		
+		{#if $page.error && 'stack' in $page.error}
+			<pre class="stack">{$page.error.stack}</pre>
+		{/if}
+	</div>
+{/if}
 
 <style lang="scss">
 	h1 {
