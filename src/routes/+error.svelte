@@ -54,7 +54,7 @@
 		}
 
 		.stack {
-			color: rgba(var(--fg-d-rgb), 0.5);
+			color: color-mix(in lch, var(--fg-d-rgb), transparent 50%);
 			max-height: 40vh;
 			overflow-y: auto;
 		}
@@ -65,14 +65,14 @@
 			height: 10px;
 		}
 		::-webkit-scrollbar-thumb {
-			background-color: rgba(var(--bg-d-rgb), 0.5);
+			background-color: color-mix(in lch, var(--bg-d-rgb), transparent 50%);
 			border-radius: 5px;
 		}
 		::-webkit-scrollbar-track {
-			background-color: rgba(var(--bg-d-rgb), 0.1);
+			background-color: color-mix(in lch, var(--bg-d-rgb), transparent 10%);
 		}
 		::-webkit-scrollbar-corner {
-			background-color: rgba(var(--bg-d-rgb), 0.1);
+			background-color: color-mix(in lch, var(--bg-d-rgb), transparent 10%);
 		}
 	}
 </style>

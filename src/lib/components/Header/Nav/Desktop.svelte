@@ -65,12 +65,12 @@
 	}
 
 	a:hover {
-		color: var(--brand-a);
+		color: var(--theme-a);
 
 		text-decoration: none;
 	}
 
 	.active {
-		color: var(--brand-a);
+		color: var(--theme-a);
 	}
 </style>
