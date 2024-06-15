@@ -25,7 +25,7 @@
 
 </template>
 
-<style>
+<style lang="scss">
 	nav {
 		display: flex;
 		justify-content: center;
@@ -35,7 +35,7 @@
 
 	ul {
 		display: flex;
-		gap: 2rem;
+		gap: 3rem;
 
 		z-index: 1;
 	}
@@ -49,28 +49,38 @@
 	a {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 
 		height: 100%;
 
 		color: currentColor;
 
 		font-size: var(--font-sm);
-		font-weight: 300;
+		font-variation-settings:
+			'wght' 300,
+			'wdth' 97;
 		text-transform: uppercase;
 		text-decoration: none;
-		letter-spacing: 0.25rem;
+		letter-spacing: 2.75px;
 
-		transition: color 0.15s linear;
+		transition: 0.2s;
 		pointer-events: all;
 	}
 
 	a:hover {
-		color: var(--theme-a);
-
 		text-decoration: none;
+
+		font-variation-settings:
+			'wght' 700,
+			'wdth' 94.66;
 	}
 
 	.active {
 		color: var(--theme-a);
+		a {
+			font-variation-settings:
+				'wght' 700,
+				'wdth' 94.66;
+		}
 	}
 </style>

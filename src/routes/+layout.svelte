@@ -1,7 +1,8 @@
 <script lang="ts">
 	import 'greset/greset.css'
 
-	import { Header, PageTitle } from '$lib/components'
+	import Header from '$lib/components/Header/Header.svelte'
+	import PageTitle from '$lib/components/PageTitle.svelte'
 	import { Fractils, theme } from 'fractils'
 	import { browser } from '$app/environment'
 	import { parse } from 'cookie'
@@ -19,6 +20,6 @@
 
 <Header />
 
-<div class="br-md" />
+<div class="br-md"></div>
 
 <slot />

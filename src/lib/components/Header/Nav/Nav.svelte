@@ -6,6 +6,7 @@
 	import Desktop from './Desktop.svelte'
 
 	setContext('links', [
+		['/elements', 'Elements'],
 		['/about', 'About'],
 		['/contact', 'Contact'],
 	])
