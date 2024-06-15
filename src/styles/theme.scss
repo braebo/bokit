@@ -1,29 +1,50 @@
 :root {
-	--theme-a: #57b1ff;
-	--theme-b: #ffcc8b;
-	--theme-c: #ff8ba9;
+	// --theme-a: #57b1ff;
+	// --theme-b: #ffcc8b;
+	// --theme-c: #ff8ba9;
+	--theme-a: #00bcd4;
+	--theme-b: #f8d2c9;
+	--theme-c: #ba788a;
 
 	--always-dark: #0b0e11;
+	--success: #88ff88;
+	--warn: #ff8888;
 
-	--fg-a: #0b0e11;
-	--fg-b: #1c1e21;
-	--fg-c: #1d252e;
-	--fg-d: #3a3a44;
+	--dark-a: #0b0b11;
+	--dark-b: #15161d;
+	--dark-c: #1f202d;
+	--dark-d: #353746;
+	--dark-e: #474a5b;
+	--light-a: #ffffff;
+	--light-b: #dfe1e9;
+	--light-c: #babeca;
+	--light-d: #777d8f;
+	--light-e: #5f6377;
 
-	--bg-a: #ffffff;
-	--bg-b: #dfe1e9;
-	--bg-c: #c3c4c7;
-	--bg-d: #acacb4;
+	--bg-a: #0b0b11;
+	--bg-b: #15161d;
+	--bg-c: #1f202d;
+	--bg-d: #353746;
+	--bg-e: #474a5b;
+	--fg-a: #ffffff;
+	--fg-b: #dfe1e9;
+	--fg-c: #babeca;
+	--fg-d: #777d8f;
+	--fg-e: #5f6377;
 
+	
+	&[mode='light'],
 	&[theme='light'] {
-		--fg-a: #0b0e11;
-		--fg-b: #1c1e21;
-		--fg-c: #1d252e;
-		--fg-d: #3a3a44;
+		--fg-a: #0b0b11;
+		--fg-b: #15161d;
+		--fg-c: #1f202d;
+		--fg-d: #353746;
+		--fg-e: #474a5b;
 
 		--bg-a: #ffffff;
 		--bg-b: #dfe1e9;
-		--bg-c: #c3c4c7;
-		--bg-d: #acacb4;
+		--bg-c: #babeca;
+		--bg-d: #777d8f;
+		--bg-e: #5f6377;
 	}
 }
