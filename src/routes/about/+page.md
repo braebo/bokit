@@ -4,7 +4,7 @@
 
 <section in:fadeIn out:fadeOut>
 
-### An opinionated starter template for Sveltekit
+#### An opinionated starter template for Sveltekit
 
 Pre-configured with:
 
@@ -20,11 +20,13 @@ Pre-configured with:
 -   [Prettier](https://prettier.io/)
 -   [Greset](https://github.com/ghostdevv/greset)
 -   [SCSS](https://sass-lang.com/)
--   [Pug](https://github.com/Refzlund/svelte-awesome-pug)
+-   [Pug](https://github.com/pugjs/pug)
+
+<br />
 
 </section>
 
-<style>
+<style lang="scss">
 	p {
 		max-width: min(100vw, 900px);
 		margin: auto;
@@ -45,5 +47,18 @@ Pre-configured with:
 	a:hover {
 		padding: 0rem;
 		font-variation-settings: 'wght' 400;
+	}
+
+	section {
+		margin: 1rem auto;
+		max-width: min(100vw, 900px);
+	}
+
+	h4 {
+		margin: 1rem auto 2rem auto;
+
+		a {
+			text-decoration: none;
+		}
 	}
 </style>
