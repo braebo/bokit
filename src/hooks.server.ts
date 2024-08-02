@@ -9,7 +9,7 @@ export const handle: Handle = ({ event, resolve }) => {
 	return resolve(event, {
 		transformPageChunk: ({ html, done }) => {
 			page += html
-			if (done) return page.replace('%frackit.theme%', event.locals.theme)
+			if (done) return page.replace('%bokit.theme%', event.locals.theme)
 		}
 	})
 }

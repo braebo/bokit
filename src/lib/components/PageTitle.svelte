@@ -15,5 +15,5 @@
 </script>
 
 <svelte:head>
-	<title>Frackit · {pageTitle()}</title>
+	<title>bokit · {pageTitle()}</title>
 </svelte:head>

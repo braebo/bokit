@@ -1,5 +1,5 @@
 {
-	"name": "frackit",
+	"name": "bokit",
 	"private": true,
 	"version": "0.0.1",
 	"description": "Opinionated SvelteKit starter template.",
