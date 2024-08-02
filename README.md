@@ -1,16 +1,16 @@
 # [bokit](https://github.com/fractalhq/bokit)
 
-Minimal Sveltekit Starter Template.
+An opinionated Sveltekit starter-template.
 
 <br>
 
-### download
+### init
 
 ```bash
 npx degit fractalhq/bokit app
 ```
 
-### launch
+### run
 
 ```bash
 cd app
@@ -18,13 +18,13 @@ npm install
 npm run dev
 ```
 
-### cusomize
+### next steps
 
 -   Generate static files with [realfavicongenerator](https://realfavicongenerator.net/) and drop the result into `/static` to replace content like icons / pwa metadata with your own.
 
 -   Generate metatags [here](https://metatags.io/) and paste them into `/src/app.html` to replace the meta with your own.
 
-### features
+### some features
 
 -   [Vercel](https://vercel.com)
 -   [Typescript](https://www.typescriptlang.org)
