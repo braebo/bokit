@@ -42,8 +42,6 @@
 		</ul>
 	</section>
 
-	<!-- <div class="divider"></div> -->
-
 	<section in:fly|global={{ ...IN, y: 7.5, duration: 300, delay: 150 }} out:fade|global={OUT}>
 		<input class="input" type="text" placeholder="text" />
 		<input class="input" type="number" placeholder="number" />
@@ -66,32 +64,23 @@
 <style lang="scss">
 	.page {
 		display: flex;
-		// flex-direction: row-reverse;
-		// gap: 10rem;
 		flex-wrap: wrap;
+
 		width: min(750px, calc(100vw - 2rem));
-		margin: 0 auto;
 		height: auto;
+		margin: 0 auto;
 	}
 
 	section {
-		margin: 1rem auto;
-		max-width: min(100vw, 50rem);
-		// flex-grow: 1;
 		flex-shrink: 0;
+
 		width: 30rem;
+		max-width: min(100vw, 50rem);
+		margin: 1rem auto;
 	}
 
 	section:first-of-type {
 		width: 15rem;
 		min-width: unset;
 	}
-
-	// .divider {
-	// 	display: flex;
-	// 	// flex-grow: 1;
-	//   // flex-shrink: 1;
-	// 	// width: 100%;
-	//   min-width: 1rem;
-	// }
 </style>
