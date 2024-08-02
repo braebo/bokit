@@ -2,6 +2,8 @@
 
 An opinionated Sveltekit starter-template.
 
+demo · https://bokit.braebo.dev
+
 <br>
 
 ### init
