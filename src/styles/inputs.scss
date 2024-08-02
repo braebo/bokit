@@ -40,15 +40,16 @@
 			height: 15px;
 
 			border: 0.5px solid var(--bg-a);
+			border-radius: 50px;
+			background: var(--bg-b);
+			
+			cursor: pointer;
+			
+			transition: border-color 0.1s;
+			
 			&:hover {
 				border-color: var(--bg-d);
 			}
-			border-radius: 50px;
-			background: var(--bg-b);
-
-			cursor: pointer;
-
-			transition: border-color 0.1s;
 		}
 		&::-webkit-slider-thumb {
 			width: 12px;

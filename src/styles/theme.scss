@@ -1,10 +1,9 @@
 :root {
-	// --theme-a: #57b1ff;
-	// --theme-b: #ffcc8b;
-	// --theme-c: #ff8ba9;
-	--theme-a: #00bcd4;
-	--theme-b: #f8d2c9;
-	--theme-c: #ba788a;
+	color-scheme: dark;
+
+	--theme-a: #57b1ff;
+	--theme-b: #ffcc8b;
+	--theme-c: #ff8ba9;
 
 	--always-dark: #0b0e11;
 	--success: #88ff88;
@@ -32,9 +31,10 @@
 	--fg-d: #777d8f;
 	--fg-e: #5f6377;
 
-	
 	&[mode='light'],
 	&[theme='light'] {
+		color-scheme: light;
+
 		--fg-a: #0b0b11;
 		--fg-b: #15161d;
 		--fg-c: #1f202d;
