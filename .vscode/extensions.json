@@ -5,7 +5,6 @@
 		 */
 		"christian-kohler.path-intellisense",
 		"aaron-bond.better-comments",
-		"zokugun.explicit-folding",
 		"svelte.svelte-vscode",
 		"unifiedjs.vscode-mdx" // MDSvex Language Support
 
@@ -20,6 +19,7 @@
 		// "alefragnani.project-manager",
 		// "ms-vsliveshare.vsliveshare",
 		// "pkief.material-icon-theme",
+		// "zokugun.explicit-folding",
 		// "naumovs.color-highlight",
 		// "stevencl.adddoccomments",
 		// "inu1255.easy-snippet",

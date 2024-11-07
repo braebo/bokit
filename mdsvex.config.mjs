@@ -1,4 +1,5 @@
 // https://mdsvex.com/docs#options
+
 import autolinkHeadings from 'rehype-autolink-headings'
 import slug from 'rehype-slug'
 import abbr from 'remark-abbr'
@@ -7,7 +8,7 @@ import abbr from 'remark-abbr'
 const mdsvexConfig = {
 	extensions: ['.md'],
 	smartypants: {
-		dashes: 'oldschool'
+		dashes: 'oldschool',
 	},
 	remarkPlugins: [abbr],
 	rehypePlugins: [
@@ -15,10 +16,10 @@ const mdsvexConfig = {
 		[
 			autolinkHeadings,
 			{
-				behavior: 'wrap'
-			}
-		]
-	]
+				behavior: 'wrap',
+			},
+		],
+	],
 }
 
 export default mdsvexConfig
