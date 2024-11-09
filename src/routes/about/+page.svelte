@@ -1,6 +1,6 @@
 <script>
-	import { fly, fade } from 'svelte/transition'
-	import { IN, OUT } from '$lib/utils'
+	import { OUT } from '$lib/utils/transitions'
+	import { fade } from 'svelte/transition'
 </script>
 
 <section out:fade|global={OUT}>

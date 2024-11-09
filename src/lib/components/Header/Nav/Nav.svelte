@@ -1,24 +1,17 @@
 <script lang="ts">
-	import { setContext } from 'svelte'
-	import { mobile } from 'fractils'
-
+	import { device } from '$lib/utils/device.svelte'
 	import Mobile from './Mobile/Mobile.svelte'
 	import Desktop from './Desktop.svelte'
 
-	setContext('links', [
+	const links = [
 		['/elements', 'Elements'],
 		['/about', 'About'],
 		['/contact', 'Contact'],
-	])
+	] as [path: string, title: string][]
 </script>
 
-<template lang="pug">
-
-	+if('$mobile')
-
-		Mobile
-
-		+else
-			Desktop
-
-</template>
+{#if device.mobile}
+	<Mobile {links} />
+{:else}
+	<Desktop {links} />
+{/if}

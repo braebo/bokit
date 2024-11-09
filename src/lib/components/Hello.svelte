@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { fadeOut, fadeIn } from '$lib/utils'
+	import { fade_in, fade_out } from '$lib/utils/transitions'
 </script>
 
-<section in:fadeIn out:fadeOut>
+<section in:fade_in out:fade_out>
 	<h1>
 		{#each 'Hello' as letter}
 			<div class="letter">{letter}</div>

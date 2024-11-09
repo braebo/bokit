@@ -1,12 +1,13 @@
 <script lang="ts">
 	import HomeIcon from '$lib/components/Header/HomeIcon.svelte'
-	import { mobile, ThemeToggle } from 'fractils'
+	import { device } from '$lib/utils/device.svelte'
+	import ThemeSwitch from '../ThemeSwitch.svelte'
 	import { page } from '$app/stores'
 	import Nav from './Nav/Nav.svelte'
 </script>
 
 <header>
-	<div id="home" class="corner">
+	<div class="home">
 		<a href="/" class:active={$page.url.pathname === '/'}>
 			<HomeIcon />
 		</a>
@@ -14,9 +15,9 @@
 
 	<Nav />
 
-	{#if !$mobile}
-		<div id="theme" class="corner" class:mobile={$mobile}>
-			<ThemeToggle />
+	{#if !device.mobile}
+		<div class="theme">
+			<ThemeSwitch />
 		</div>
 	{/if}
 </header>
@@ -25,34 +26,17 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		height: 4rem;
+		padding: 0 1.5rem;
 
 		z-index: 50;
 	}
 
-	.corner {
-		display: flex;
+	.theme {
 		position: relative;
-		align-items: center;
-		justify-content: center;
-
-		width: 4rem;
-		height: 4rem;
-	}
-
-	#theme {
-		position: relative;
-		filter: saturate(0);
-
 		z-index: 30;
-
-		transition: filter 0.2s ease-in-out;
-		&:hover {
-			filter: saturate(1);
-		}
-	}
-
-	.mobile {
-		right: 4rem;
 	}
 
 	.active {

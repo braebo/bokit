@@ -9,34 +9,34 @@ export const OUT = { duration: 75, delay: 0, easing: quintOut }
 const duration = 75
 const delay = 75
 
-export const fadeOut = (node: HTMLElement, params?: FadeParams) => {
+export const fade_out = (node: HTMLElement, params?: FadeParams) => {
 	return fade(node, {
 		duration,
 		easing: cubicIn,
-		...params
+		...params,
 	})
 }
 
-export const fadeIn = (node: HTMLElement, params?: FadeParams) => {
+export const fade_in = (node: HTMLElement, params?: FadeParams) => {
 	return fade(node, {
 		delay,
 		easing: cubicOut,
-		...params
+		...params,
 	})
 }
 
-export const flyIn = (node: HTMLElement, params: FlyParams = { y: 10 }) => {
+export const fly_in = (node: HTMLElement, params: FlyParams = { y: 10 }) => {
 	return fly(node, {
 		delay,
 		easing: cubicIn,
-		...params
+		...params,
 	})
 }
 
-export const flyOut = (node: HTMLElement, params: FlyParams = { y: 10 }) => {
+export const fly_out = (node: HTMLElement, params: FlyParams = { y: 10 }) => {
 	return fly(node, {
 		duration,
 		easing: cubicOut,
-		...params
+		...params,
 	})
 }

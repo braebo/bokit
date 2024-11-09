@@ -1,29 +1,25 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition'
-	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
 
-	const links = getContext('links')
-	export let showMenu = false
+	const {
+		links,
+		showMenu = $bindable(false),
+	}: {
+		links: [path: string, title: string][]
+		showMenu?: boolean
+	} = $props()
 </script>
 
-<template lang="pug">
-
-	nav(class:showMenu)
-		ul
-			+each('links as [path, title], i (title)')
-
-				li(
-					class:active='{$page.url.pathname === path}'
-					transition:fly|global='{{ y: -10 - (5 * i) }}'
-				)
-
-					a(
-						data-sveltekit-prefetch
-						href='{path}'
-					) {title}
-
-</template>
+<nav class:showMenu>
+	<ul>
+		{#each links as [path, title], i (title)}
+			<li class:active={$page.url.pathname === path} transition:fly|global={{ y: -10 - 5 * i }}>
+				<a data-sveltekit-prefetch href={path}>{title}</a>
+			</li>
+		{/each}
+	</ul>
+</nav>
 
 <style lang="scss">
 	nav {

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { IN, OUT } from '$lib/utils/transitions'
 	import { fly, fade } from 'svelte/transition'
-	import { IN, OUT } from '$lib/utils'
 </script>
 
 <div class="br-md"></div>

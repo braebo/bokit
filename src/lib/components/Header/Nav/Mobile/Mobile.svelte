@@ -1,16 +1,22 @@
 <script lang="ts">
-	import { clickOutside, mobile, ThemeToggle } from 'fractils'
+	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
+	import { clickOutside } from '$lib/utils/click-outside'
+	import { device } from '$lib/utils/device.svelte'
 	import { fly, fade } from 'svelte/transition'
 	import PageFill from './PageFill.svelte'
 	import Burger from './Burger.svelte'
-	import { getContext } from 'svelte'
 	import { page } from '$app/stores'
 
-	const links = getContext<string[]>('links')
-	export let showMenu = false
+	let {
+		links,
+		showMenu = $bindable(false),
+	}: {
+		links: [string, string][]
+		showMenu?: boolean
+	} = $props()
 </script>
 
-<div class="burger" use:clickOutside={{ whitelist: ['wrapper'] }} on:outclick={() => (showMenu = false)}>
+<div class="burger" use:clickOutside={{ whitelist: ['wrapper'] }} onOutClick={() => showMenu = false}>
 	<Burger bind:showMenu />
 </div>
 
@@ -18,10 +24,10 @@
 
 {#if showMenu}
 	<div id="theme" class="corner">
-		<ThemeToggle />
+		<ThemeSwitch />
 	</div>
 
-	<nav class:showMenu class:mobile={$mobile}>
+	<nav class:showMenu class:mobile={device.mobile}>
 		<ul>
 			{#each links as [path, title], i (title)}
 				<li
@@ -29,7 +35,7 @@
 					in:fly|global={{ y: -10 - 5 * i }}
 					out:fade|global={{ duration: 50 }}
 				>
-					<a on:click={() => (showMenu = false)} data-sveltekit-prefetch href={path}>{title}</a>
+					<a onclick={() => showMenu = false} data-sveltekit-prefetch href={path}>{title}</a>
 				</li>
 			{/each}
 		</ul>
