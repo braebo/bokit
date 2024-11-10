@@ -1,21 +1,30 @@
+br-xs,
 .br-xs {
 	height: 0.5rem;
 }
+
+br-sm,
 .br-sm {
 	height: 1rem;
 }
+
+br-md,
 .br-md {
 	height: 4rem;
 	@media screen and (max-width: 560px) {
 		height: 3rem;
 	}
 }
+
+br-lg,
 .br-lg {
 	height: 6.5rem;
 	@media screen and (max-width: 560px) {
 		height: 5rem;
 	}
 }
+
+br-xl,
 .br-xl {
 	height: 10rem;
 	@media screen and (max-width: 560px) {

@@ -1,28 +1,3 @@
-@font-face {
-	font-family: 'mona';
-	src:
-		url('/fonts/mona_sans/mona_sans.woff2') format('woff2 supports variations'),
-		url('/fonts/mona_sans/mona_sans.woff2') format('woff2-variations');
-	font-weight: 200 900;
-	font-stretch: 75% 125%;
-	font-style: oblique 0deg 10deg;
-	font-display: auto;
-}
-
-/*	RUBIK  -  Variable Font (wght) */
-@font-face {
-	font-family: 'rubik';
-	font-weight: 100 900;
-	font-style: normal;
-	src: url('/fonts/rubik/rubik.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'rubik_italic';
-	font-weight: 100 900;
-	font-style: italic;
-	src: url('/fonts/rubik/rubik-italic.ttf') format('truetype');
-}
-
 /* RED HAT TEXT  -  Varitable Font (wght) */
 @font-face {
 	font-family: 'red_hat_text';
@@ -54,10 +29,7 @@
 }
 
 :root {
-	--font-a: 'mona', sans-serif;
-	--font-b: 'rubik', sans-serif;
-	--font-c: 'dosis', sans-serif;
-	--font-d: 'red_hat_text', sans-serif;
+	--font-a: 'red_hat_text', sans-serif;
 	--font-mono: 'inconsolata', monospace;
 
 	--font-xxs: 0.75rem;
@@ -85,7 +57,8 @@ h2,
 h3,
 h4,
 h5,
-section {
+section,
+blockquote {
 	font-family: var(--font-a, system-ui, Inter, Avenir, Helvetica, Arial, sans-serif);
 }
 

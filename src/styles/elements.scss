@@ -1,3 +1,5 @@
+@use './theme.scss';
+
 h1 {
 	font-size: var(--font-xl);
 }
@@ -23,11 +25,15 @@ h6 {
 }
 
 p,
-li {
+li,
+a,
+blockquote {
 	color: var(--fg-a, --text-color);
 
 	font-size: var(--font);
 	line-height: 1.4;
+	text-wrap: balance !important;
+	word-wrap: balance !important;
 
 	@media screen and (max-width: 560px) {
 		word-wrap: break-word;
@@ -43,7 +49,7 @@ li {
 }
 
 a {
-	color: var(--fg-a);
+	color: color-mix(in lab, var(--fg-a), var(--theme-a) 33%);
 
 	text-decoration: underline;
 	text-decoration-color: var(--bg-d);
@@ -55,7 +61,8 @@ a {
 }
 
 pre {
-	padding: 0.5rem;
+	box-sizing: border-box;
+	padding: var(--padding);
 	outline: 1px solid var(--bg-a);
 	font-family: var(--font-mono);
 }
@@ -76,9 +83,11 @@ pre,
 	overflow-x: auto;
 }
 
-code {
-	width: fit-content;
+:not(pre) > code {
 	padding: 0.15rem 0.5rem;
+}
+
+code {
 	font-family: var(--font-mono);
 }
 
@@ -93,7 +102,7 @@ blockquote {
 
 	font-style: italic;
 	outline: 1px solid var(--bg-a);
-	background: var(--bg-b);
+	// background: var(--bg-b);
 	box-shadow: var(--shadow-sm);
 
 	color: var(--fg-a);
@@ -112,9 +121,30 @@ blockquote {
 }
 
 input,
-button {
+button,
+textarea,
+select,
+blockquote {
 	font-size: inherit;
 	font-family: inherit;
+}
+
+button {
+	background: var(--bg-b);
+	color: var(--fg-a);
+	border: none;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow-sm);
+	padding: var(--padding) calc(var(--padding) * 3);
+	width: fit-content;
+
+	&:hover {
+		background: color-mix(in hsl, var(--bg-b) 80%, var(--bg-a));
+	}
+	&:active {
+		background: color-mix(in hsl, var(--bg-b) 60%, var(--bg-a));
+		box-shadow: 0 0 0 var(--shadow-sm);
+	}
 }
 
 button:focus:not(:focus-visible) {
@@ -133,4 +163,14 @@ section {
 
 hr {
 	width: 100%;
+}
+
+mark {
+	background: var(--theme-a);
+
+	width: fit-content;
+	padding: 0 var(--padding);
+
+	// makes the div look skewed almost as if it's italic
+	clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
 }
