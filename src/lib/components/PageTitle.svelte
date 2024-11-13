@@ -15,5 +15,5 @@
 </script>
 
 <svelte:head>
-	<title>bokit · {pageTitle()}</title>
+	<title>sveltekit-starter · {pageTitle()}</title>
 </svelte:head>

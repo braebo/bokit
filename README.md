@@ -1,15 +1,15 @@
-# [bokit](https://github.com/fractalhq/bokit)
+# [sveltekit-starter](https://github.com/braebo/sveltekit-starter)
 
 An opinionated Sveltekit starter-template.
 
-demo · https://bokit.braebo.dev
+demo · https://sveltekit-starter.braebo.dev
 
 <br>
 
 ### init
 
 ```bash
-npx degit fractalhq/bokit app
+npx degit braebo/sveltekit-starter app
 ```
 
 ### run
@@ -36,8 +36,8 @@ npm run dev
 -   [PostCSS](https://postcss.org)
     -   [CSSNano](https://github.com/cssnano/cssnano)
     -   [Autoprefixer](https://github.com/postcss/autoprefixer)
--   [Dark Theme](https://github.com/fractalhq/#ThemeToggle)
--   [Fractils](https://github.com/fractalhq/fractils)
+-   [Dark Theme](https://github.com/braebo/#ThemeToggle)
+-   [Fractils](https://github.com/braebo/fractils)
 -   [Greset](https://github.com/ghostdevv/greset)
--   [Local](https://github.com/FractalHQ/bokit/tree/main/static/fonts) Font [Setup](https://github.com/FractalHQ/bokit/blob/main/src/styles/app.scss#L4-L24)
+-   [Local](https://github.com/Braebo/sveltekit-starter/tree/main/static/fonts) Font [Setup](https://github.com/Braebo/sveltekit-starter/blob/main/src/styles/app.scss#L4-L24)
 -   PWA / Service Worker

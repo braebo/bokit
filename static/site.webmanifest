@@ -1,6 +1,6 @@
 {
-    "name": "bokit",
-    "short_name": "bokit",
+    "name": "sveltekit-starter",
+    "short_name": "sveltekit-starter",
 	"start_url": "/",
     "icons": [
         {
@@ -17,5 +17,5 @@
     "theme_color": "#00d0ff",
     "background_color": "#3d3d3d",
     "display": "standalone",
-	"descripton": "Fractal's personal sveltekit starter template"
+	"description": "Braebo's personal sveltekit starter template"
 }

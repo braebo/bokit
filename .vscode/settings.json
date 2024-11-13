@@ -2,6 +2,10 @@
 	"css.lint.vendorPrefix": "ignore",
 	"scss.lint.vendorPrefix": "ignore",
 
+	"files.exclude": {
+		"**/.git": true
+	},
+
 	"files.associations": {
 		"[*.md, *.svx, *.mdsvex]": "mdx", //* https://github.com/pngwn/MDsveX/issues/121#issuecomment-675106929
 		"*.xml": "html", //* Prettier
