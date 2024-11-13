@@ -54,52 +54,18 @@
 				</ul>
 			</li>
 		</ul>
+	</section>
 
+	<section style:gap="1.5rem" in:fly|global={{ ...IN, y: 7.5, duration: 300, delay: 150 }} out:fade|global={OUT}>
 		<!-- prettier-ignore -->
 		<p>
 			<!-- svelte-ignore a11y_invalid_attribute -->
 			Paragraph canary danced beneath <a href="">azure skies</a>, while marble fountains sparkled with untold mysteries. Velvet shadows crept along ancient walls, whispering secrets to passing travelers who dared not linger.
 		</p>
-	</section>
 
-	<section style:gap="1.5rem" in:fly|global={{ ...IN, y: 7.5, duration: 300, delay: 150 }} out:fade|global={OUT}>
-		<label>
-			<div>text</div>
-			<input type="text" placeholder="foo" />
-		</label>
-
-		<label>
-			<div>textarea</div>
-			<textarea placeholder="lorem ipsum dolor sit amet"></textarea>
-		</label>
-
-		<label>
-			<div>number</div>
-			<input type="number" placeholder="123" />
-		</label>
-
-		<label>
-			<div>range</div>
-			<input type="range" />
-		</label>
-
-		<label>
-			<div>checkbox</div>
-			<input type="checkbox" checked />
-		</label>
-
-		<label>
-			<div>radio</div>
-			<input type="radio" />
-		</label>
-
-		<label>
-			<div>select</div>
-			<select>
-				<option>foo</option>
-				<option>bar</option>
-			</select>
-		</label>
+		<!-- svelte-ignore a11y_invalid_attribute -->
+		<!-- prettier-ignore -->
+		<blockquote> Blockquote golden leaves tumbled through forgotten courtyards, each one carrying <a href="">fragments of memories</a> long since scattered to the winds.</blockquote>
 
 		<!-- svelte-ignore a11y_invalid_attribute -->
 		<a href="">https://some.really-long-link-that-would-normally-cause-horizontal-overflow</a>
@@ -119,10 +85,6 @@ shiki-end -->
 
 		<code>code</code>
 
-		<!-- svelte-ignore a11y_invalid_attribute -->
-		<!-- prettier-ignore -->
-		<blockquote> Blockquote golden leaves tumbled through forgotten courtyards, each one carrying <a href="">fragments of memories</a> long since scattered to the winds.</blockquote>
-
 		<button>button</button>
 	</section>
 </div>
@@ -140,13 +102,5 @@ shiki-end -->
 	section {
 		width: 25rem;
 		margin: 1rem auto;
-	}
-
-	label {
-		input,
-		textarea,
-		select {
-			margin-left: 0.5rem;
-		}
 	}
 </style>

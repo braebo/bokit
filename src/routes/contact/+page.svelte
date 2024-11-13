@@ -3,7 +3,7 @@
 	import { fly, fade } from 'svelte/transition'
 </script>
 
-<div class="br-md"></div>
+<br-md />
 
 <center in:fly|global={{ ...IN, y: 5 }} out:fade={OUT}>
 	<a href="mailto:contact@example.com">contact</a>
