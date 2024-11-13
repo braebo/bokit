@@ -1,43 +1,38 @@
 # [sveltekit-starter](https://github.com/braebo/sveltekit-starter)
 
-An opinionated Sveltekit starter-template.
+A minimal, opinionated Sveltekit starter-template.
 
 demo · https://sveltekit-starter.braebo.dev
-
-<br>
 
 ### init
 
 ```bash
-npx degit braebo/sveltekit-starter app
+npx degit braebo/sveltekit-starter my-app
 ```
 
 ### run
 
 ```bash
-cd app
-npm install
-npm run dev
+cd my-app
+pnpm install
+pnpm dev
 ```
 
-### next steps
+### meta
 
--   Generate static files with [realfavicongenerator](https://realfavicongenerator.net/) and drop the result into `/static` to replace content like icons / pwa metadata with your own.
+-   Generate static files with [realfavicongenerator](https://realfavicongenerator.net/) and drop the result into [`/static`](./static) to replace content like icons / pwa metadata with your own.
 
--   Generate metatags [here](https://metatags.io/) and paste them into `/src/app.html` to replace the meta with your own.
+-   Generate metatags with [metatags.io](https://metatags.io/) to overwrite the existing ones in [`/src/app.html`](./src/app.html).
 
 ### some features
 
--   [Vercel](https://vercel.com)
--   [Typescript](https://www.typescriptlang.org)
--   [MDSvex](https://mdsvex.com)
--   [Stylelint](https://github.com/stylelint/stylelint)
--   [SCSS/SASS](https://sass-lang.com)
--   [PostCSS](https://postcss.org)
-    -   [CSSNano](https://github.com/cssnano/cssnano)
-    -   [Autoprefixer](https://github.com/postcss/autoprefixer)
--   [Dark Theme](https://github.com/braebo/#ThemeToggle)
--   [Fractils](https://github.com/braebo/fractils)
--   [Greset](https://github.com/ghostdevv/greset)
--   [Local](https://github.com/Braebo/sveltekit-starter/tree/main/static/fonts) Font [Setup](https://github.com/Braebo/sveltekit-starter/blob/main/src/styles/app.scss#L4-L24)
--   PWA / Service Worker
+-   design system
+-   dynamic themer
+-   [samplekit's](https://preprocessors.samplekit.dev/docs/code-decoration/) [shiki](https://shiki.style) [preprocessor](https://github.com/samplekit/preprocess-shiki)
+-   [mdsvex](https://mdsvex.com)
+-   common utils
+-   typescript
+-   [scss](https://sass-lang.com)
+-   [autoprefixer](https://github.com/postcss/autoprefixer)
+-   local font setup
+-   mobile nav
