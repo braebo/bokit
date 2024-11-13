@@ -5,8 +5,7 @@
 
 	const links = [
 		['/elements', 'Elements'],
-		['/about', 'About'],
-		['/contact', 'Contact'],
+		['/inputs', 'Inputs'],
 	] as [path: string, title: string][]
 </script>
 
