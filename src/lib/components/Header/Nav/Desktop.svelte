@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition'
 	import { page } from '$app/stores'
 
 	const {
@@ -14,7 +13,8 @@
 <nav class:showMenu>
 	<ul>
 		{#each links as [path, title], i (title)}
-			<li class:active={$page.url.pathname === path} transition:fly|global={{ y: -10 - 5 * i }}>
+			<!-- <li class:active={$page.url.pathname === path} transition:fly|global={{ y: -10 - 5 * i }}> -->
+			<li class:active={$page.url.pathname === path} style:animation-delay={`${links.length * 0.1 - (i % 2) * 0.1}s`}>
 				<a data-sveltekit-prefetch href={path}>{title}</a>
 			</li>
 		{/each}
@@ -23,6 +23,9 @@
 
 <style lang="scss">
 	nav {
+		position: absolute;
+		inset: 0;
+
 		display: flex;
 		justify-content: center;
 
@@ -39,7 +42,22 @@
 	li {
 		list-style: none;
 
+		width: 4rem;
+
 		color: var(--fg-a);
+		opacity: 0;
+		transform: translateY(-5px);
+		animation: fly 2s cubic-bezier(0.23, 1, 0.320, 1) 0.1s forwards;
+	}
+	@keyframes fly {
+		from {
+			opacity: 0;
+			transform: translateY(-5px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	a {
@@ -52,12 +70,15 @@
 		color: currentColor;
 
 		font-size: var(--font-sm);
+		// font-variation-settings:
+		// 	'wght' 300,
+		// 	'wdth' 97;
 		font-variation-settings:
-			'wght' 300,
+			'wght' 500,
 			'wdth' 97;
 		text-transform: uppercase;
 		text-decoration: none;
-		letter-spacing: 2.75px;
+		// letter-spacing: 2.75px;
 
 		transition: 0.2s;
 		pointer-events: all;

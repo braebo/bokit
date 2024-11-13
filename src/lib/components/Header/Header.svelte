@@ -8,27 +8,29 @@
 
 <header>
 	<div class="home">
-		<a href="/" class:active={$page.url.pathname === '/'}>
-			<HomeIcon />
+		<a href="/">
+			<HomeIcon active={$page.url.pathname === '/'} />
 		</a>
 	</div>
 
 	<Nav />
 
-	{#if !device.mobile}
-		<div class="theme">
+	<div class="theme">
+		{#if !device.mobile}
 			<ThemeSwitch />
-		</div>
-	{/if}
+		{/if}
+	</div>
 </header>
 
 <style lang="scss">
 	header {
+		position: relative;
+		
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
-		height: 4rem;
+		height: 5rem;
 		padding: 0 1.5rem;
 
 		z-index: 50;
@@ -37,9 +39,5 @@
 	.theme {
 		position: relative;
 		z-index: 30;
-	}
-
-	.active {
-		color: var(--theme-a);
 	}
 </style>
